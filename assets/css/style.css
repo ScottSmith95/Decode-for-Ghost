@@ -80,14 +80,14 @@ body {
 }
 
 ::-moz-selection {
-    color: #222;
-    background: #D6EDFF;
+    color: #444;
+    background: rgba(0,155,205,0.25);
     text-shadow: none;
 }
 
 ::selection {
-    color: #222;
-    background: #D6EDFF;
+    color: #444;
+    background: rgba(0,155,205,0.25);
     text-shadow: none;
 }
 
@@ -101,6 +101,7 @@ h4, h5, h6 {
 a {
 	transition: color ease-out 0.25s, border-bottom ease-out 0.25s;
 	color: #009BCD;
+	text-decoration: none;
 	border-bottom: 1px solid rgba(127,127,127,0);
 }
 
@@ -112,11 +113,11 @@ a:active {
     color: #007EA6;
 }
 
-.post-excerpt a:hover, .post content a:hover {
+.post-excerpt a:hover, .post-content a:hover {
     border-bottom: 1px solid #009BCD;
 }
 
-.post-excerpt a:active, .post content a:active {
+.post-excerpt a:active, .post-content a:active {
     border-bottom: 1px solid #007EA6;
 }
 
@@ -147,9 +148,9 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0 1.6em -2.2em;
-    padding: 0 0 0 1.6em;
-    border-left: #4a4a4a 0.4em solid;
+    margin: 0;
+    padding-left: 1.2em;
+    border-left: #009BCD 0.15em solid;
 }
 
 blockquote p {
@@ -160,7 +161,7 @@ blockquote p {
 blockquote small {
     display: inline-block;
     margin: 0.8em 0 0.8em 1.5em;;
-    font-size:0.9em;
+    font-size: 0.9em;
     color: #ccc;
 }
 
@@ -372,6 +373,11 @@ table.plain {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
+	color: #444;
+	text-decoration: none;
+}
+
+.blog-title h1 {
     margin: 10px 0 10px 0;
     font-size: 1.95em;
     letter-spacing: -1px;
@@ -379,7 +385,7 @@ table.plain {
 
 .blog-description {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5em;
     font-weight: 300;
     letter-spacing: 0;
@@ -451,6 +457,7 @@ table.plain {
 	display: inline-block;
 	font-size: 0.8em;
 	color: #808080;
+	text-decoration: none;
 	padding: 0 2.5% 1%;
 	border-bottom: 1px solid #009BCD;
 	margin: 1.5% auto;
@@ -566,12 +573,12 @@ table.plain {
     max-width: 700px;
     margin: 4rem auto;
     font-size: 1.3rem;
-    color: #9EABB3;
+    color: #808080;
     text-align: center;
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: #808080;
 }
 
 /* Push the previous/next links out to the left/right */
@@ -580,7 +587,7 @@ table.plain {
     position: absolute;
     display: inline-block;
     padding: 0 15px;
-    border: #EBF2F6 2px solid;
+    border: #444 2px solid;
     text-decoration: none;
     border-radius: 30px;
     transition: border ease 0.3s;
@@ -601,7 +608,7 @@ table.plain {
 
 .older-posts:hover,
 .newer-posts:hover {
-    border-color: #9EABB3;
+    border-color: #808080;
 }
 
 
@@ -620,12 +627,12 @@ table.plain {
 }
 
 .site-footer a {
-    color: #BBC7CC;
+    color: #808080;
     text-decoration: underline;
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    color: #009BCD;
 }
 
 .poweredby .icon-ghost {
@@ -735,7 +742,7 @@ table.plain {
 	width: 80%;
 }
 
-.blog-title {
+.blog-title h1 {
 	font-size: 2.8em;
 }
 
@@ -772,7 +779,7 @@ table.plain {
 	max-width: 60em;
 }
 
-.blog-title {
+.blog-title h1 {
 	font-size: 3.5em;
 }
 }
