@@ -320,6 +320,17 @@ table.plain {
     vertical-align: middle;
 }
 
+/* Micro Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
 
 /* ==========================================================================
    1. General
@@ -597,34 +608,32 @@ table.plain {
 
 /* The main wrapper for our pagination links */
 .pagination {
-    position: relative;
-    width: 100%;
-    margin: 3.5% auto;
-    font-size: 1.3rem;
-    color: #808080;
-    text-align: center;
+	position: relative;
+	margin: 3.5% 5%;
+	font-size: 1.3rem;
+	color: #808080;
+	text-align: center;
 }
 
 .pagination a {
-    color: #808080;
+	color: #808080;
 }
 
 .pagination a:hover {
-    color: #009BCD;
+	color: #009BCD;
 }
 
 .pagination a:active {
-    color: #007EA6;
+	color: #007EA6;
 }
 
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
-    transition: padding ease 0.3s;
-    padding: 0;
+	display: block;
+	text-decoration: none;
+	transition: padding ease 0.3s;
+	padding: 0;
 }
 
 .older-posts:hover,
@@ -634,16 +643,17 @@ table.plain {
 
 .older-posts {
 	padding-right: 0;
-    right: 0;
+	float: right;
 }
 
 .page-number {
-    display: inline-block;
+	display: block;
+	clear: both;
 }
 
 .newer-posts {
 	padding-left: 0;
-    left: 0;
+	float: left;
 }
 
 
@@ -771,6 +781,11 @@ table.plain {
 
 .post {
 	width: 100%;
+}
+
+.page-number {
+    display: block;
+    clear: none;
 }
 }
 
