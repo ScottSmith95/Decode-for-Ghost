@@ -347,13 +347,13 @@ table.plain {
 	user-drag: none;
 }
 
-	.no-touch .site-logo:hover {
+	.blog-logo img:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 		filter: alpha(opacity=75);
 		opacity: 0.75;
 	}
 	
-	.no-touch .site-logo:active {
+	.blog-logo img:active {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
 		filter: alpha(opacity=85);
 		opacity: 0.85;
