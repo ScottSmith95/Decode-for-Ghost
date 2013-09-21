@@ -392,7 +392,7 @@ table.plain {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
 	position: relative;
-	width: 100%;
+	width: 92.5%;
 	margin: 5% auto 10%;
 	padding-bottom: 5%;
 	border-bottom: #009BCD 1px solid;
@@ -524,11 +524,6 @@ table.plain {
     display: none;
 }
 
-/* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-    padding: 60px 0;
-}
-
 /* Keep large images within the bounds of the post-width */
 .post-content img {
     display: block;
@@ -541,7 +536,6 @@ table.plain {
     position: relative;
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
 }
 
 .post-footer h4 {
@@ -558,28 +552,6 @@ table.plain {
 /* Create some space to the right for the share links */
 .post-footer .author {
     margin-right: 180px;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
 }
 
 
@@ -745,68 +717,7 @@ table.plain {
 
 
 /* ==========================================================================
-   1. Media Queries - Smaller than 900px
-   ========================================================================== */
-
-@media only screen and (max-width: 900px) {
-
-    blockquote {
-        margin-left: 0;
-    }
-
-    #site-head {
-        -webkit-box-sizing: border-box; 
-        -moz-box-sizing: border-box;
-        box-sizing: border-box; 
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
-    }
-
-    .blog-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
-    }
-
-    .blog-description {
-        font-size: 1.7rem;
-        line-height: 1.5em;
-    }
-
-    .post {
-        font-size: 0.9em;
-        line-height: 1.6em;
-    }
-
-    .post-template .post {
-        padding-bottom: 1rem;
-    }
-
-    .post-template .post-header {
-        padding: 40px 0;
-    }
-
-    h1 {
-        font-size: 4.8rem;
-        text-indent: -2px;
-    }
-
-    h2 {
-        font-size: 3.8rem;
-    }
-
-    h3 {
-        font-size: 3.3rem;
-    }
-
-    h4 {
-        font-size: 2.8rem;
-    }
-
-}
-
-/* ==========================================================================
-   1. Media Queries
+   Media Queries
    ========================================================================== */
 
 /* Tablets
