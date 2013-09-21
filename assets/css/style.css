@@ -668,11 +668,11 @@ table.plain {
 }
 
 .subscribe:hover {
-    background-color: rgba(0,153,204,0.6);
+    background-color: #6CB4D4;
 }
 
 .subscribe:active {
-    background-color: rgba(0,153,204,0.8);
+    background-color: #31abdb;
 }
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
