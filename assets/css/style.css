@@ -598,9 +598,8 @@ table.plain {
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: 4rem auto;
+    width: 100%;
+    margin: 3.5% auto;
     font-size: 1.3rem;
     color: #808080;
     text-align: center;
@@ -610,34 +609,41 @@ table.plain {
     color: #808080;
 }
 
+.pagination a:hover {
+    color: #009BCD;
+}
+
+.pagination a:active {
+    color: #007EA6;
+}
+
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
     position: absolute;
     display: inline-block;
-    padding: 0 15px;
-    border: #444 2px solid;
     text-decoration: none;
-    border-radius: 30px;
-    transition: border ease 0.3s;
+    transition: padding ease 0.3s;
+    padding: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+	padding: 0 2.5%;
 }
 
 .older-posts {
+	padding-right: 0;
     right: 0;
 }
 
 .page-number {
     display: inline-block;
-    padding: 2px 0;
 }
 
 .newer-posts {
+	padding-left: 0;
     left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-    border-color: #808080;
 }
 
 
@@ -761,6 +767,10 @@ table.plain {
 @media only screen and (min-width: 35em) {
 .site-header, .content, .site-footer {
 	width: 82.5%;
+}
+
+.post {
+	width: 100%;
 }
 }
 
