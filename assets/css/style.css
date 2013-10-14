@@ -673,7 +673,6 @@ table.plain {
 
 .site-footer a {
     color: #808080;
-    text-decoration: underline;
 }
 
 .site-footer a:hover {
@@ -781,11 +780,6 @@ table.plain {
 
 .post {
 	width: 100%;
-}
-
-.page-number {
-    display: block;
-    clear: none;
 }
 }
 
