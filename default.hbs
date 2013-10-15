@@ -22,12 +22,6 @@
 </head>
 <body class="{{body_class}}">
 
-<header class="site-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-    <a class="blog-title" href="{{@blog.url}}"><h1>{{@blog.title}}</h1></a>
-    <h2 class="blog-description">{{@blog.description}}</h2>
-</header>
-
     {{! Everything else gets inserted here }}
     {{{body}}}
 
@@ -38,7 +32,8 @@
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org">Ghost</a></section>
         </div>
     </footer>
-
+</div>
+	
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 

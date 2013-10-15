@@ -4,8 +4,14 @@
 
 /*
    0.   Includes
-   1.   General
-   2.   Something else
+   1.   Icons
+   2.   Base Styles
+   3.   Utilities
+   4.   General
+   5.   Single Post
+   6.   Pagination
+   7.   Footer
+   8.   Media Queries
  */
 
 /* ==========================================================================
@@ -32,7 +38,7 @@
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+.icon-ghost, .icon-feed {
     font-family: 'icons';
     speak: none;
     font-style: normal;
@@ -52,20 +58,10 @@
 .icon-feed:before {
     content: "\e001";
 }
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\e003";
-}
-.icon-facebook:before {
-    content: "\e004";
-}
 
 
 /* ==========================================================================
-   1. General - Setting up some base styles
+   2. Base Styles - Setting up some base styles
    ========================================================================== */
 
 html {
@@ -160,7 +156,7 @@ blockquote p {
 
 blockquote small {
     display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;;
+    margin: 0.8em 0 0.8em 1.5em;
     font-size: 0.9em;
     color: #ccc;
 }
@@ -296,7 +292,7 @@ table.plain {
 
 
 /* ==========================================================================
-   1. Utilities - These things get used a lot
+   3. Utilities - These things get used a lot
    ========================================================================== */
 
 /* Hides shit */
@@ -309,12 +305,12 @@ table.plain {
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 700px;
     margin: 0 auto;
 }
 
-/* Centres vertically yo. (IE8+) */
+/* Centers vertically (IE8+) */
 .vertical {
     display: table-cell;
     vertical-align: middle;
@@ -333,30 +329,52 @@ table.plain {
 
 
 /* ==========================================================================
-   1. General
+   4. General
    ========================================================================== */
 
-/* Big cover image on the home page */
-.site-header {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 1.5%;
-	border-bottom: 1px solid #009BCD;
-	margin: 3.5% auto;
+
+.blog-cover {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 7.5em;
+	top: 0;
 }
 
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+.home-template .site-main.home {
+	position: relative; /* Create stacking context and set height above cover photo */
+	z-index: 2;
+	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
+}
+
+.home-template .site-header, .home-template .content, .home-template .footer {
+	position: relative;
+	top: -3em;
+}
+
 .blog-logo img {
+	position: relative;
+	z-index: 2;
     display: block;
     -webkit-transition: opacity 0.5s ease-out;
 	-moz-transition: opacity 0.5s ease-out;
 	transition: opacity 0.5s ease-out;
-	margin: 0 auto 2%;
-	max-height: 8.5em;
+	margin: 0 auto;
+	height: 6em;
 	width: auto;
 	opacity: 1;
 	-webkit-user-drag: none;
 	user-drag: none;
+}
+
+.home-template .blog-logo img {
+	-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
+	filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
+}
+
+.post-template .blog-logo img {
+	margin-top: 2.5%;
 }
 
 	.blog-logo img:hover {
@@ -371,6 +389,13 @@ table.plain {
 		opacity: 0.85;
 	}
 
+/* Big cover image on the home page */
+.site-header {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5%;
+	border-bottom: 1px solid #009BCD;
+	margin: 0 auto 3.5%;
 }
 
 #back {
@@ -428,23 +453,26 @@ table.plain {
 	hyphens: auto;
 }
 
+.post:last-of-type {
+	margin-bottom: 0;
+}
+
 .post-header {
 	text-align: center;
 	margin: 0 auto;
 }
 
 .post-title {
-    margin: 0;
+	margin: 0;
 }
 
 .post-title a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .post-excerpt p {
-    margin: 1.6rem 0 0 0;
-    font-size: 0.9em;
-    line-height: 1.6em;
+	margin: 1.6rem 0 0 0;
+	line-height: 1.6em;
 }
 
 .content .post h1 {
@@ -538,7 +566,7 @@ table.plain {
 }
 
 /* ==========================================================================
-   1. Single Post - When you click on an individual post
+   5. Single Post - When you click on an individual post
    ========================================================================== */
 
 /* Tweak the .post wrapper style */
@@ -585,7 +613,7 @@ table.plain {
 	transition: box-shadow 0.35s ease-out;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 	padding: 3.5%;
-	margin: 0 auto 3.5%;
+	margin: 0 auto 15%;
 	text-align: left;
 }
 
@@ -593,23 +621,42 @@ table.plain {
 		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
 	}
 
-.author-card h4 {
-	font-size: 1.4em;
+.author-card .author-image {
+	float: left;
+	width: 25%;
+	max-width: 125px;
 }
 
-.author-card p {
-	font-size: 1em;
+.author-card .author-image img {
+	border-radius: 50%;
+	display: block;
+	max-width: 100%;
+	margin: 0;
+}
+
+.author-card .author-text {
+	margin-left: 5%;
+}
+
+.author-card .author-name {
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+.author-card .author-bio {
+	font-size: 0.9em;
+	margin: 1% auto;
 }
 
 
 /* ==========================================================================
-   1. Pagination
+   6. Pagination
    ========================================================================== */
 
 /* The main wrapper for our pagination links */
 .pagination {
 	position: relative;
-	margin: 3.5% 5%;
+	margin: 7.5% 5% 10%;
 	font-size: 1.3rem;
 	color: #808080;
 	text-align: center;
@@ -658,7 +705,7 @@ table.plain {
 
 
 /* ==========================================================================
-   1. Footer - The bottom of every page
+   7. Footer - The bottom of every page
    ========================================================================== */
 
 .site-footer {
@@ -668,7 +715,7 @@ table.plain {
     border-top: #009BCD 1px solid;
     line-height: 1.7em;
     text-align: center;
-    width: 100%;
+    width: 85%;
 }
 
 .site-footer a {
@@ -726,38 +773,38 @@ table.plain {
     background-color: #31abdb;
 }
 
-/* CSS tooltip saying "Subscribe!" - initially hidden */
+/* CSS tooltip saying "RSS" - initially hidden */
 .tooltip {
     opacity:0;
     display: inline-block;
     padding: 4px 8px 5px 8px;
-    position:absolute;
+    position: absolute;
     top: -23px;
-    left: -28px;
+    left: -1px;
     color: rgba(255,255,255,0.9);
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 1em;
     text-align: center;
     background: #50585D;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease, top 0.3s ease;
 }
 
 /* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
+    content: "";
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
     border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
     margin-left:-5px;
     z-index: 220;
-    width:0;
+    width: 0;
 }
 
 /* On hover, show the tooltip! */
@@ -768,26 +815,62 @@ table.plain {
 
 
 /* ==========================================================================
-   Media Queries
+   8. Media Queries — The secret sauce that makes Decode awesome
    ========================================================================== */
 
 /* Tablets
 --------------------------------------- */
 @media only screen and (min-width: 35em) {
-.site-header, .content, .site-footer {
+.site-header, .content {
 	width: 82.5%;
+}
+
+.site-footer {
+	width: 75%;
+}
+
+.home-template .site-header, .home-template .content, .home-template .footer {
+	top: -4.25em;
+}
+
+.blog-cover {
+	height: 15em;
+}
+
+.blog-logo img {
+	height: 8.5em;
 }
 
 .post {
 	width: 100%;
+}
+
+.author-card {
+	margin-bottom: 5%;
+}
+
+.author-card .author-image img {
+	max-width: 125px;
+}
+
+.pagination {
+	margin: 7.5% 5%;
 }
 }
 
 /* Desktops
 --------------------------------------- */
 @media only screen and (min-width: 50em) {
-.site-header, .content, .site-footer {
+.site-header, .content {
 	width: 80%;
+}
+
+.site-footer {
+	width: 72.5%;
+}
+
+.blog-cover {
+	height: 20em;
 }
 
 .blog-title h1 {
@@ -822,9 +905,18 @@ table.plain {
 /* Even Larger Screens
 --------------------------------------- */
 @media only screen and (min-width: 68.5em) {
-.site-header, .content, .site-footer {
+.site-header, .content {
 	width: 60%;
 	max-width: 60em;
+}
+
+.site-footer {
+	width: 52.5%;
+	max-width: 55em;
+}
+
+.blog-cover {
+	height: 25em;
 }
 
 .blog-title h1 {
