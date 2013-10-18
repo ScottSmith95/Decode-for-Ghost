@@ -18,7 +18,8 @@
    0. Includes - Ground zero
    ========================================================================== */
 
-@import url(normalize.css);
+@import url(normalize.css); /* Basic style normalizing */
+@import url(post.css); /* Post styles */
 
 
 /* ==========================================================================
@@ -27,37 +28,38 @@
 
 /* Import the font file with the icons in it */
 @font-face {
-    font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'DecodeIcons';
+	src:url('fonts/DecodeIcons.eot');
+	src:url('fonts/DecodeIcons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DecodeIcons.ttf') format('truetype'),
+		url('fonts/DecodeIcons.woff') format('woff'),
+		url('fonts/DecodeIcons.svg#DecodeIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-/* Apply these base styles to all icons */
-.icon-ghost, .icon-feed {
-    font-family: 'icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    text-decoration: none;
+[class*="icon-"] {
+	font-family: 'DecodeIcons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Each icon is created by inserting the corret character into the 
-   content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
-    content: "\e000";
+	content: "\e000";
 }
 .icon-feed:before {
-    content: "\e001";
+	content: "\e001";
 }
+
+
 
 
 /* ==========================================================================
@@ -440,67 +442,6 @@ table.plain {
 
 .content {
 	margin: 0 auto;
-}
-
-/* Every post, on every page, gets this style on its <article> tag */
-.post {
-	position: relative;
-	width: 92.5%;
-	margin: 5% auto 10%;
-	padding-bottom: 5%;
-	border-bottom: #009BCD 1px solid;
-	word-break: break-word;
-	hyphens: auto;
-}
-
-.post:last-of-type {
-	margin-bottom: 0;
-}
-
-.post-header {
-	text-align: center;
-	margin: 0 auto;
-}
-
-.post-title {
-	margin: 0;
-}
-
-.post-title a {
-	text-decoration: none;
-}
-
-.post-excerpt p {
-	margin: 1.6rem 0 0 0;
-	line-height: 1.6em;
-}
-
-.content .post h1 {
-	font-size: 2em;
-}
-
-.content .post h2 {
-	font-size: 1.75em;
-}
-
-.content .post h3 {
-	font-size: 1.5em;
-}
-
-.content .post h4 {
-	font-size: 1.375em;
-}
-
-.content .post h5 {
-	font-size: 1.25em;
-}
-
-.content .post h6 {
-	font-size: 1.125em;
-}
-
-.content .post img {
-	margin: 2.5% auto;
 }
 
 .post-meta {

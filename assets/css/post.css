@@ -1,0 +1,60 @@
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+	position: relative;
+	width: 92.5%;
+	margin: 5% auto 10%;
+	padding-bottom: 5%;
+	border-bottom: #009BCD 1px solid;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+.post:last-of-type {
+	margin-bottom: 0;
+}
+
+.post-header {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.post-title {
+	margin: 0;
+}
+
+.post-title a {
+	text-decoration: none;
+}
+
+.post-excerpt p {
+	margin: 1.6rem 0 0 0;
+	line-height: 1.6em;
+}
+
+.content .post h1 {
+	font-size: 2em;
+}
+
+.content .post h2 {
+	font-size: 1.75em;
+}
+
+.content .post h3 {
+	font-size: 1.5em;
+}
+
+.content .post h4 {
+	font-size: 1.375em;
+}
+
+.content .post h5 {
+	font-size: 1.25em;
+}
+
+.content .post h6 {
+	font-size: 1.125em;
+}
+
+.content .post img {
+	margin: 2.5% auto;
+}
