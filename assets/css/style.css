@@ -29,7 +29,7 @@
 /* Import the font file with the icons in it */
 @font-face {
 	font-family: 'DecodeIcons';
-	src: url('fonts/DecodeIcons.eot');
+	src: url('../fonts/DecodeIcons.eot');
 }
 @font-face {
 	font-family: 'DecodeIcons';
