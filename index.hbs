@@ -1,15 +1,15 @@
 {{!< default}}
 
 {{#if @blog.cover}}
-	<div class="blog-cover" style="background: url({{@blog.cover}}) top no-repeat fixed; background-size: 100%;"></div>
+	<div class="blog-cover" style="background: url({{@blog.cover}}) center no-repeat fixed; background-size: 100%; background-size: cover;"></div>
 {{/if}}
 
 <div class="site-main home">
 
 <header class="site-header">
     {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-    <a class="blog-title" href="{{@blog.url}}"><h1>{{@blog.title}}</h1></a>
-    <h2 class="blog-description">{{@blog.description}}</h2>
+	{{#if @blog.title}}<a class="blog-title" href="{{@blog.url}}"><h1>{{@blog.title}}</h1></a>{{/if}}
+	{{#if @blog.description}}<h2 class="blog-description">{{@blog.description}}</h2>{{/if}}
 </header>
 
 {{! The main content area on the homepage }}
@@ -23,9 +23,14 @@
             <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
 			<a class="post-meta" href="{{url}}">Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
         </header>
+        
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
         </section>
+		
+        <footer class="post-footer">
+        	<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
+        </footer> 
     </article>
 
     {{/foreach}}

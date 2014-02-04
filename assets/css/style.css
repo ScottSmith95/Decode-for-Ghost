@@ -19,8 +19,6 @@
    ========================================================================== */
 
 @import url(normalize.css); /* Basic style normalizing */
-@import url(post.css); /* Post styles */
-
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -376,17 +374,27 @@ table.plain {
 	filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
 }
 
+	.home-template .blog-logo img:hover {
+		-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.5));
+		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.5));
+	}
+	
+	.home-template .blog-logo img:active {
+		-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.45));
+		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.45));
+	}
+
 .post-template .blog-logo img {
 	margin-top: 2.5%;
 }
 
-	.blog-logo img:hover {
+	.post-template .blog-logo img:hover {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 		filter: alpha(opacity=75);
 		opacity: 0.75;
 	}
 	
-	.blog-logo img:active {
+	.post-template .blog-logo img:active {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
 		filter: alpha(opacity=85);
 		opacity: 0.85;
@@ -445,6 +453,64 @@ table.plain {
 	margin: 0 auto;
 }
 
+.post {
+	position: relative;
+	width: 92.5%;
+	margin: 5% auto 10%;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+.post:last-of-type {
+	margin-bottom: 0;
+}
+
+.post-header {
+	text-align: center;
+	margin: 0 auto 2.5%;
+}
+
+.post-title {
+	margin: 0;
+}
+
+.post-title a {
+	text-decoration: none;
+}
+
+.post-excerpt p {
+	margin: 1.6rem 0 0 0;
+	line-height: 1.6em;
+}
+
+.content .post h1 {
+	font-size: 2em;
+}
+
+.content .post h2 {
+	font-size: 1.75em;
+}
+
+.content .post h3 {
+	font-size: 1.5em;
+}
+
+.content .post h4 {
+	font-size: 1.375em;
+}
+
+.content .post h5 {
+	font-size: 1.25em;
+}
+
+.content .post h6 {
+	font-size: 1.125em;
+}
+
+.content .post img {
+	margin: 2.5% auto;
+}
+
 .post-meta {
 	display: inline-block;
 	font-size: 0.8em;
@@ -464,47 +530,14 @@ table.plain {
     text-decoration: underline;
 }
 
-.user-meta {
-    position: relative;
-    padding: 0.3rem 40px 0 100px;
-    min-height: 77px;
+.post-footer {
+    padding-bottom: 1.5%;
+	border-bottom: #009BCD 1px solid;
 }
 
-.user-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.user-name {
-    display: block;
-    font-weight: bold;
-}
-
-.user-bio {
-    display: block;
-    max-width: 440px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-}
-
-.publish-meta {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 4.3rem 0 4rem 0;
-    text-align: right;
-}
-
-.publish-heading {
-    display: block;
-    font-weight: bold;
-}
-
-.publish-date {
-    display: block;
-    font-size: 1.4rem;
-    line-height: 1.5em;
+.post-tags {
+	color: #808080;
+	font-size: 0.9em;
 }
 
 /* ==========================================================================
@@ -533,8 +566,7 @@ table.plain {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
+	margin: 15% auto 0;
 }
 
 .post-footer h4 {
@@ -583,6 +615,10 @@ table.plain {
 .author-card .author-name {
 	font-size: 1.6em;
 	font-weight: normal;
+}
+
+.author-card .author-website {
+	margin-left: 1.5%;
 }
 
 .author-card .author-bio {
@@ -785,6 +821,12 @@ table.plain {
 
 .post {
 	width: 100%;
+}
+
+.post-footer {
+    width: 85%;
+	margin-top: 15%;
+}
 }
 
 .author-card {
