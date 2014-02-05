@@ -21,7 +21,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} {{#if @blog.cover}}blog-has-cover{{/if}}">
 
     {{! Everything else gets inserted here }}
     {{{body}}}

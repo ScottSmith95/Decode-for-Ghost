@@ -343,13 +343,13 @@ table.plain {
 	top: 0;
 }
 
-.home-template .site-main.home {
+.home-template.blog-has-cover .site-main.home {
 	position: relative; /* Create stacking context and set height above cover photo */
 	z-index: 2;
 	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
 }
 
-.home-template .site-header, .home-template .content, .home-template .footer {
+.home-template.blog-has-cover .site-main {
 	position: relative;
 	top: -3em;
 }
@@ -807,7 +807,7 @@ table.plain {
 	width: 75%;
 }
 
-.home-template .site-header, .home-template .content, .home-template .footer {
+.home-template.blog-has-cover .site-main {
 	top: -4.25em;
 }
 
