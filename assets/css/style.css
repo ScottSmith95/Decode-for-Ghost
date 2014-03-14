@@ -349,7 +349,9 @@ table.plain {
 	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
 }
 
-.home-template.blog-has-cover .site-main {
+.home-template.blog-has-cover .site-header,
+.home-template.blog-has-cover .home-template .content,
+.home-template.blog-has-cover .home-template .footer {
 	position: relative;
 	top: -3em;
 }
@@ -807,7 +809,9 @@ table.plain {
 	width: 75%;
 }
 
-.home-template.blog-has-cover .site-main {
+.home-template.blog-has-cover .site-header,
+.home-template.blog-has-cover .home-template .content,
+.home-template.blog-has-cover .home-template .footer {
 	top: -4.25em;
 }
 
