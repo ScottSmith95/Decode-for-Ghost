@@ -351,8 +351,8 @@ table.plain {
 }
 
 .home-template.blog-has-cover .site-header,
-.home-template.blog-has-cover .home-template .site-content,
-.home-template.blog-has-cover .home-template .site-footer {
+.home-template.blog-has-cover .site-content,
+.home-template.blog-has-cover .site-footer {
 	position: relative;
 	top: -3em;
 }
@@ -692,7 +692,7 @@ table.plain {
 .site-footer {
     position: relative;
     margin: 5% auto 0;
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     border-top: #009BCD 1px solid;
     line-height: 1.7em;
     text-align: center;
@@ -811,8 +811,8 @@ table.plain {
 }
 
 .home-template.blog-has-cover .site-header,
-.home-template.blog-has-cover .home-template .site-content,
-.home-template.blog-has-cover .home-template .site-footer {
+.home-template.blog-has-cover .site-content,
+.home-template.blog-has-cover .site-footer {
 	top: -4.25em;
 }
 
