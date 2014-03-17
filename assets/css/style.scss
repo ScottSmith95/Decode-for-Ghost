@@ -18,6 +18,7 @@
    0. Includes - Ground zero
    ========================================================================== */
 
+@import 'settings'; /* Import custom-defined styles */
 @import '../../bower_components/normalize-css/normalize.css'; /* Basic style normalizing */
 
 /* ==========================================================================
@@ -69,20 +70,14 @@ html {
 }
 
 body {
-    font: normal 300 110%/1.5 "Oxygen", "Helvetica Neue", "Arial", sans-serif;
-    color: #444;
-    background: #E3E5E7;
-}
-
-::-moz-selection {
-    color: #444;
-    background: rgba(0,155,205,0.25);
-    text-shadow: none;
+    font: normal 300 110%/1.5 $font-family;
+    color: $text-color;
+    background: $background-color;
 }
 
 ::selection {
-    color: #444;
-    background: rgba(0,155,205,0.25);
+    color: $text-color;
+    background: $highlight-color;
     text-shadow: none;
 }
 
@@ -95,30 +90,30 @@ h4, h5, h6 {
 
 a {
 	transition: color ease-out 0.25s, border-bottom ease-out 0.25s;
-	color: #009BCD;
+	color: $accent-color;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(127,127,127,0);
 }
 
 a:hover {
-    color: #009BCD;
+    color: $accent-color;
 }
 
 a:active {
-    color: #007EA6;
+    color: $secondary-accent-color;
 }
 
 .post-excerpt a:hover, .post-content a:hover {
-    border-bottom: 1px solid #009BCD;
+    border-bottom: 1px solid $accent-color;
 }
 
 .post-excerpt a:active, .post-content a:active {
-    border-bottom: 1px solid #007EA6;
+    border-bottom: 1px solid $secondary-accent-color;
 }
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #444444;
+    color: $text-color;
 }
 
 
@@ -141,11 +136,10 @@ hr {
 }
 
 blockquote {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding-left: 1.2em;
-    border-left: #009BCD 0.15em solid;
+    border-left: $accent-color 0.15em solid;
 }
 
 blockquote p {
@@ -205,7 +199,6 @@ code, tt {
 }
 
 pre {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
     border: 1px solid #E3EDF3;
@@ -245,7 +238,6 @@ kbd {
 }
 
 table {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
     width:100%;
@@ -294,7 +286,7 @@ table.plain {
    3. Utilities - These things get used a lot
    ========================================================================== */
 
-/* Hides shit */
+/* Hides junk */
 .hidden {
     text-indent: -9999px;
     visibility: hidden;
@@ -370,17 +362,14 @@ table.plain {
 }
 
 .home-template .blog-logo img {
-	-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
 	filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
 }
 
 	.home-template .blog-logo img:hover {
-		-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.5));
 		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.5));
 	}
 	
 	.home-template .blog-logo img:active {
-		-webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.45));
 		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.45));
 	}
 
@@ -389,14 +378,10 @@ table.plain {
 }
 
 	.post-template .blog-logo img:hover {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-		filter: alpha(opacity=75);
 		opacity: 0.75;
 	}
 	
 	.post-template .blog-logo img:active {
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-		filter: alpha(opacity=85);
 		opacity: 0.85;
 	}
 
@@ -405,7 +390,7 @@ table.plain {
     width: 100%;
     text-align: center;
     padding-bottom: 1.5%;
-	border-bottom: 1px solid #009BCD;
+	border-bottom: 1px solid $accent-color;
 	margin: 0 auto 3.5%;
 }
 
@@ -514,10 +499,10 @@ table.plain {
 .post-meta {
 	display: inline-block;
 	font-size: 0.8em;
-	color: #808080;
+	color: $secondary-text-color;
 	text-decoration: none;
 	padding: 0 2.5% 1%;
-	border-bottom: 1px solid #009BCD;
+	border-bottom: 1px solid $accent-color;
 	margin: 1.5% auto;
 }
 
@@ -532,11 +517,11 @@ table.plain {
 
 .post-footer {
     padding-bottom: 1.5%;
-	border-bottom: #009BCD 1px solid;
+	border-bottom: 1px solid $accent-color;
 }
 
 .post-tags {
-	color: #808080;
+	color: $secondary-text-color;
 	font-size: 0.9em;
 }
 
@@ -582,8 +567,6 @@ table.plain {
 
 /* Create some space to the right for the share links */
 .author-card {
-    -webkit-transition: box-shadow 0.35s ease-out;
-	-moz-transition: box-shadow 0.35s ease-out;
 	transition: box-shadow 0.35s ease-out;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 	padding: 3.5%;
@@ -636,20 +619,20 @@ table.plain {
 	position: relative;
 	margin: 7.5% 5% 10%;
 	font-size: 1.3rem;
-	color: #808080;
+	color: $secondary-text-color;
 	text-align: center;
 }
 
 .pagination a {
-	color: #808080;
+	color: $secondary-text-color;
 }
 
 .pagination a:hover {
-	color: #009BCD;
+	color: $accent-color;
 }
 
 .pagination a:active {
-	color: #007EA6;
+	color: $secondary-accent-color;
 }
 
 /* Push the previous/next links out to the left/right */
@@ -690,18 +673,18 @@ table.plain {
     position: relative;
     margin: 5% auto 0;
     padding: 4rem 0 0;
-    border-top: #009BCD 1px solid;
+    border-top: 1px solid $accent-color;
     line-height: 1.7em;
     text-align: center;
     width: 85%;
 }
 
 .site-footer a {
-    color: #808080;
+    color: $secondary-text-color;
 }
 
 .site-footer a:hover {
-    color: #009BCD;
+    color: $accent-color;
 }
 
 .poweredby .icon-ghost {
@@ -729,7 +712,7 @@ table.plain {
     text-align: center;
     line-height: 2.4rem;
     border-radius: 50%;
-    background-color: #009BCD;
+    background-color: $accent-color;
     transition: background-color 0.5s;
 }
 
