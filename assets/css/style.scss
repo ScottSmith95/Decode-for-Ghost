@@ -338,6 +338,9 @@ table.plain {
 
 
 .blog-cover {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	display: block;
 	position: relative;
 	z-index: 1;
