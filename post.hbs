@@ -10,45 +10,45 @@
 
 <main class="site-content" role="main">
 
-    <article class="{{post_class}}">
+	<article class="{{post_class}}">
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+		{{! Everything inside the #post tags pulls data from the post }}
+		{{#post}}
 
-        {{! Everything below outputs content of the the post which has been published }}
+		{{! Everything below outputs content of the the post which has been published }}
 
 		<header class="post-header">
-        	<h1 class="post-title">{{title}}</h1>
+			<h1 class="post-title">{{title}}</h1>
 			<span class="post-meta">Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time></span>
 		</header>
 
-        <section class="post-content">
-            {{content}}
-        </section>
+		<section class="post-content">
+			{{content}}
+		</section>
 
-        <footer class="post-footer">
-            {{#if author}}
-                <section class="author-card cf">
-                	{{#if author.image}}
-	                	<div class="author-image">
-	                		<img src="{{author.image}}" alt="Author Image">
-	                	</div>
-	                {{/if}}
-                    <div class="author-text" {{#if author.image}}style="width: 65%; float: left;"{{/if}}>
-	                    {{#if author.name}}<span class="author-name">{{author.name}}</span>{{/if}}
-	                    {{#if author.website}}<a href="{{author.website}}" class="author-website" rel="author">Website</a>{{/if}}
-	                    {{#if author.bio}}<p class="author-bio">{{author.bio}}</p>{{/if}}
-	                </div>
-                </section>
-            {{/if}}
-            
-            {{#if tags}}
-	        	<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
-	        {{/if}}
-        </footer>
+		<footer class="post-footer">
+			{{#if author}}
+				<section class="author-card cf">
+					{{#if author.image}}
+					 	<div class="author-image">
+					 		<img src="{{author.image}}" alt="Author Image">
+					 	</div>
+					 {{/if}}
+					<div class="author-text" {{#if author.image}}style="width: 65%; float: left;"{{/if}}>
+						 {{#if author.name}}<span class="author-name">{{author.name}}</span>{{/if}}
+						 {{#if author.website}}<a href="{{author.website}}" class="author-website" rel="author">Website</a>{{/if}}
+						 {{#if author.bio}}<p class="author-bio">{{author.bio}}</p>{{/if}}
+					 </div>
+				</section>
+			{{/if}}
+			
+			{{#if tags}}
+			 	<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
+			 {{/if}}
+		</footer>
 
-        {{/post}}
+		{{/post}}
 
-    </article>
+	</article>
 
 </main>
