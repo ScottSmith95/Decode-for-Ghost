@@ -105,6 +105,7 @@ a {
 
 .post-excerpt a,
 .post-content a,
+.author-card a,
 .post-meta a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	border-bottom: 0 solid rgba(127,127,127,0);
@@ -112,12 +113,14 @@ a {
 		
 	.post-excerpt a:hover,
 	.post-content a:hover,
+	.author-card a:hover,
 	.post-meta a:hover {
 	    border-bottom: 1px solid $accent-color;
 	}
 	
 	.post-excerpt a:active,
 	.post-content a:active,
+	.author-card a:active,
 	.post-meta a:active {
 	    border-bottom: 1px solid $secondary-accent-color;
 	}
@@ -412,11 +415,11 @@ table.plain {
 	margin: 0 auto;
 	font-size: 1.75em;
 	letter-spacing: -1px;
-	margin: 10px 0 10px 0;
+	margin: 10px 0 10px;
 }
 
 .blog-title a {
-	transition: text-shadow 0.5s;
+	transition: text-shadow 0.5s ease-out;
 	color: $text-color;
 }
 
