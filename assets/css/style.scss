@@ -89,27 +89,38 @@ h4, h5, h6 {
 }
 
 a {
-	transition: color ease-out 0.25s, border-bottom ease-out 0.25s;
+	transition: color ease-out 0.4s;
 	color: $accent-color;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(127,127,127,0);
 }
 
-a:hover {
-    color: $accent-color;
-}
+	a:hover {
+	    color: $accent-color;
+	}
+	
+	a:active {
+	    color: $secondary-accent-color;
+	}
 
-a:active {
-    color: $secondary-accent-color;
+.post-excerpt a,
+.post-content a,
+.post-meta a {
+	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+	border-bottom: 0 solid rgba(127,127,127,0);
 }
-
-.post-excerpt a:hover, .post-content a:hover {
-    border-bottom: 1px solid $accent-color;
-}
-
-.post-excerpt a:active, .post-content a:active {
-    border-bottom: 1px solid $secondary-accent-color;
-}
+		
+	.post-excerpt a:hover,
+	.post-content a:hover,
+	.post-meta a:hover {
+	    border-bottom: 1px solid $accent-color;
+	}
+	
+	.post-excerpt a:active,
+	.post-content a:active,
+	.post-meta a:active {
+	    border-bottom: 1px solid $secondary-accent-color;
+	}
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
@@ -214,7 +225,6 @@ pre {
 
 pre code, tt {
     font-size: inherit;
-    white-space: -moz-pre-wrap;
     white-space: pre-wrap;
     background: transparent;
     border: none;
@@ -333,7 +343,8 @@ table.plain {
 	top: 0;
 }
 
-.home-template.blog-has-cover .site-main.home {
+.home-template.blog-has-cover .site-main.home,
+.archive-template.blog-has-cover .site-main.home {
 	position: relative; /* Create stacking context and set height above cover photo */
 	z-index: 2;
 	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
@@ -341,37 +352,30 @@ table.plain {
 
 .home-template.blog-has-cover .site-header,
 .home-template.blog-has-cover .site-content,
-.home-template.blog-has-cover .site-footer {
+.home-template.blog-has-cover .site-footer,
+.archive-template.blog-has-cover .site-header,
+.archive-template.blog-has-cover .site-content,
+.archive-template.blog-has-cover .site-footer {
 	position: relative;
 	top: -3em;
 }
 
 .blog-logo img {
+	transition: opacity 0.5s ease-out;
+	opacity: 1;
 	position: relative;
 	z-index: 2;
-    display: block;
-    -webkit-transition: opacity 0.5s ease-out;
-	-moz-transition: opacity 0.5s ease-out;
-	transition: opacity 0.5s ease-out;
-	margin: 0 auto;
 	height: 6em;
 	width: auto;
-	opacity: 1;
-	-webkit-user-drag: none;
+    display: block;
+	margin: 0 auto;
 	user-drag: none;
 }
 
-.home-template .blog-logo img {
+.home-template .blog-logo img,
+.archive-template .blog-logo img {
 	filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.35));
 }
-
-	.home-template .blog-logo img:hover {
-		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.5));
-	}
-	
-	.home-template .blog-logo img:active {
-		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.45));
-	}
 
 .post-template .blog-logo img {
 	margin-top: 2.5%;
@@ -405,26 +409,26 @@ table.plain {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
+	margin: 0 auto;
+	font-size: 1.75em;
+	letter-spacing: -1px;
+	margin: 10px 0 10px 0;
+}
+
+.blog-title a {
 	transition: text-shadow 0.5s;
-	color: #444;
-	text-decoration: none;
+	color: $text-color;
 }
 
-.blog-title h1 {
-    margin: 10px 0 10px 0;
-    font-size: 1.95em;
-    letter-spacing: -1px;
-}
-
-.blog-title:hover {
-	color: #444;
-	text-shadow: 0px 0px 6px rgba(75,75,75,0.5);
-}
-
-.blog-title:active {
-	color: #444;
-	text-shadow: 0px -2px 12px rgba(75,75,75,0.85);
-}
+	.blog-title a:hover {
+		color: $text-color;
+		text-shadow: 0px 0px 6px rgba(75,75,75,0.5);
+	}
+	
+	.blog-title a:active {
+		color: $text-color;
+		text-shadow: 0px -2px 12px rgba(75,75,75,0.85);
+	}
 
 .blog-description {
     margin: 0;
@@ -508,11 +512,7 @@ table.plain {
 
 .post-meta a {
     color: #9EABB3;
-    text-decoration: none;
-}
-
-.post-meta a:hover {
-    text-decoration: underline;
+    
 }
 
 .post-footer {
@@ -627,13 +627,13 @@ table.plain {
 	color: $secondary-text-color;
 }
 
-.pagination a:hover {
-	color: $accent-color;
-}
-
-.pagination a:active {
-	color: $secondary-accent-color;
-}
+	.pagination a:hover {
+		color: $accent-color;
+	}
+	
+	.pagination a:active {
+		color: $secondary-accent-color;
+	}
 
 /* Push the previous/next links out to the left/right */
 .older-posts,
@@ -644,10 +644,10 @@ table.plain {
 	padding: 0;
 }
 
-.older-posts:hover,
-.newer-posts:hover {
-	padding: 0 2.5%;
-}
+	.older-posts:hover,
+	.newer-posts:hover {
+		padding: 0 2.5%;
+	}
 
 .older-posts {
 	padding-right: 0;
@@ -683,20 +683,15 @@ table.plain {
     color: $secondary-text-color;
 }
 
-.site-footer a:hover {
-    color: $accent-color;
-}
+	.site-footer a:hover {
+	    color: $accent-color;
+	}
 
 .poweredby .icon-ghost {
     font-weight: 700;
-    text-decoration: none;
 }
 
-.poweredby .icon-ghost:hover {
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:before {
+.poweredby .icon-ghost::before {
     font-size: 1rem;
     margin-right: 0.2em;
 }
@@ -717,7 +712,7 @@ table.plain {
 }
 
 /* The RSS icon, inserted via icon font */
-.subscribe:before {
+.subscribe::before {
 	color: #FFF;
 	font-size: 26px;
 	position: absolute;
@@ -726,13 +721,13 @@ table.plain {
     font-weight: bold;
 }
 
-.subscribe:hover {
-    background-color: #6CB4D4;
-}
-
-.subscribe:active {
-    background-color: #31abdb;
-}
+	.subscribe:hover {
+	    background-color: #6CB4D4;
+	}
+	
+	.subscribe:active {
+	    background-color: #31abdb;
+	}
 
 /* CSS tooltip saying "RSS" - initially hidden */
 .tooltip {
@@ -792,7 +787,10 @@ table.plain {
 
 .home-template.blog-has-cover .site-header,
 .home-template.blog-has-cover .site-content,
-.home-template.blog-has-cover .site-footer {
+.home-template.blog-has-cover .site-footer,
+.archive-template.blog-has-cover .site-header,
+.archive-template.blog-has-cover .site-content,
+.archive-template.blog-has-cover .site-footer {
 	top: -4.25em;
 }
 
@@ -841,7 +839,7 @@ table.plain {
 	height: 20em;
 }
 
-.blog-title h1 {
+.blog-title {
 	font-size: 2.8em;
 }
 
@@ -887,7 +885,7 @@ table.plain {
 	height: 25em;
 }
 
-.blog-title h1 {
+.blog-title {
 	font-size: 3.5em;
 }
 }
