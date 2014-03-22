@@ -615,6 +615,14 @@ table.plain {
 	margin: 1% auto;
 }
 
+.shareButtons {
+  float: right;
+  margin-top: -40px;
+}
+
+.post-tags {
+  padding-right: 100px;
+}
 
 /* ==========================================================================
    6. Pagination
@@ -775,9 +783,8 @@ table.plain {
     top: -33px;
 }
 
-
 /* ==========================================================================
-   8. Media Queries — The secret sauce that makes Decode awesome
+   8. Media Queries. The secret sauce that makes Decode awesome
    ========================================================================== */
 
 /* Tablets

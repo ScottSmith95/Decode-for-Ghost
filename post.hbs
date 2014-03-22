@@ -45,10 +45,15 @@
 			{{#if tags}}
 			 	<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
 			 {{/if}}
+			 <div class="shareButtons"></div>
 		</footer>
-
-		{{/post}}
-
 	</article>
+    <section id="comments">
+        <a class="moot"
+           href="https://moot.it/i/bukashk0zzz/comments/{{author.name}}:{{id}}"
+           title="{{title}}"
+           data-upload="true">Comments</a>
+    </section>
+	{{/post}}
 
 </main>
