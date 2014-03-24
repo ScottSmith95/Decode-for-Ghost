@@ -514,13 +514,6 @@ table.plain tbody > tr:nth-child(odd) > th {
   font-size: 0.9em;
   margin: 1% auto; }
 
-.shareButtons {
-  float: right;
-  margin-top: -40px; }
-
-.post-tags {
-  padding-right: 100px; }
-
 /* ==========================================================================
    6. Pagination
    ========================================================================== */

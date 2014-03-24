@@ -4,6 +4,13 @@
 	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
 {{/if}}
 
+{{! Add og tags to meta}}
+{{#contentFor "meta"}}
+    {{#if @blog.title}}<meta property="og:title" content="{{@blog.title}}" />{{/if}}
+    <meta property="og:type" content="website" />
+    {{#if @blog.description}}<meta property="og:description" content="{{@blog.description}}"/>{{/if}}
+{{/contentFor}}
+
 <div class="site-main home">
 
 <header class="site-header">
