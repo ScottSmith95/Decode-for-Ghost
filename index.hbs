@@ -4,11 +4,9 @@
 	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
 {{/if}}
 
-{{! Add og tags to meta}}
+{{! Add Open Graph tags to head}}
 {{#contentFor "meta"}}
-    {{#if @blog.title}}<meta property="og:title" content="{{@blog.title}}" />{{/if}}
-    <meta property="og:type" content="website" />
-    {{#if @blog.description}}<meta property="og:description" content="{{@blog.description}}"/>{{/if}}
+    {{#if @blog.description}}<meta property="og:description" content="{{meta_description}}">{{/if}}
 {{/contentFor}}
 
 <div class="site-main home">
@@ -33,7 +31,7 @@
 		
 		<section class="post-excerpt">
 			{{content words="0"}}
-			<p>{{excerpt}}</p>
+			<p>{{excerpt}}<a href="{{url}}" class="excerpt-suffix">&hellip;</a></p>
 		</section>
 		
 		<footer class="post-footer">
