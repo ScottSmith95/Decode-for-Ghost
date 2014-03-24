@@ -1,9 +1,4 @@
 {
-  "name": "Decode for Ghost",
-  "version": "0.5.4",
-  "author": "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ScottSmith95/Decode-for-Ghost.git"
-  }
+  "name": "Decode",
+  "version": "0.5.4"
+}
