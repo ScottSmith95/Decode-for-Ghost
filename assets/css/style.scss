@@ -154,6 +154,11 @@ blockquote {
     margin: 0;
     padding-left: 1.2em;
     border-left: $accent-color 0.15em solid;
+    quotes: "“" "”";
+}
+
+blockquote > p:first-child:before {
+	content: open-quote;
 }
 
 blockquote p {
