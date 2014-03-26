@@ -378,21 +378,32 @@ table.plain {
 	user-drag: none;
 }
 
-.home-template .blog-logo img,
-.archive-template .blog-logo img {
-	filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.25));
-}
-
-.post-template .blog-logo img {
+.blog-logo img {
 	margin-top: 2.5%;
 }
 
-	.post-template .blog-logo img:hover {
+	.blog-logo img:hover {
 		opacity: 0.75;
 	}
 	
-	.post-template .blog-logo img:active {
+	.blog-logo img:active {
 		opacity: 0.85;
+	}
+	
+	.home-template .blog-logo img,
+	.archive-template .blog-logo img {
+		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.25));
+		margin-top: 0;
+	}
+
+	.home-template .blog-logo img:hover,
+	.archive-template .blog-logo img:hover {
+		opacity: 1;
+	}
+	
+	.home-template .blog-logo img:active,
+	.archive-template .blog-logo img:active {
+		opacity: 1;
 	}
 
 /* Big cover image on the home page */
