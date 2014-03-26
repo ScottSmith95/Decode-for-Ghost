@@ -507,6 +507,18 @@ table.plain {
 	margin: 2.5% auto;
 }
 
+.site-content .post .excerpt-suffix {
+	color: $text-color;
+}
+
+	.site-content .post .excerpt-suffix:hover {
+	    color: $accent-color;
+	}
+	
+	.site-content .post .excerpt-suffix:active {
+	    color: $secondary-accent-color;
+	}
+
 .post-meta {
 	display: inline-block;
 	font-size: 0.8em;
