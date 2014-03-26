@@ -12,16 +12,6 @@
 
 	<article class="{{post_class}}">
 
-		<header class="post-header">
-			<a class="blog-logo" href="{{@blog.url}}">
-				{{#if @blog.logo}}
-					<img src="{{@blog.logo}}" alt="Blog Logo" />
-				{{else}}
-					<span class="blog-title">{{@blog.title}}</span>
-				{{/if}}
-			</a>
-		</header>
-
 		{{#post}}
 
 			<h1 class="post-title">{{{title}}}</h1>
