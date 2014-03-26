@@ -1,13 +1,13 @@
 {{!< default}}
 
-{{#if @blog.cover}}
-	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
-{{/if}}
-
 {{! Add Open Graph tags to head}}
 {{#contentFor "meta"}}
     {{#if @blog.description}}<meta property="og:description" content="{{meta_description}}">{{/if}}
 {{/contentFor}}
+
+{{#if @blog.cover}}
+	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
+{{/if}}
 
 <div class="site-main home">
 
