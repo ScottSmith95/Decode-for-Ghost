@@ -736,6 +736,7 @@ table.plain {
 .site-footer {
 	position: relative;
 	margin: 5% auto 0;
+	margin: calc(2.5% + 25px) auto 0;
 	padding: 4rem 0 0;
 	border-top: 1px solid $accent-color;
 	line-height: 1.7em;
