@@ -516,6 +516,12 @@ table.plain {
 		 color: $secondary-accent-color;
 	}
 
+.featured.post {
+	box-sizing: border-box;
+	background: darken($background-color, 5%);
+	padding: 2.5%;
+}
+
 /* Post Styles */
 .post-content h1 {
 	font-size: 2em;
