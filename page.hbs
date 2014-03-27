@@ -11,6 +11,11 @@
 	<article class="{{post_class}}">
 
 		{{#post}}
+		
+			{{! Add Open Graph tags to head}}
+			{{#contentFor "meta"}}
+				<meta property="og:description" content="{{excerpt characters="220"}}...">
+			{{/contentFor}}
 
 			<h1 class="post-title">{{{title}}}</h1>
 
