@@ -1,5 +1,5 @@
 # Decode for Ghost 0.5
-[Download the latest release for Ghost 0.4.1 here](https://github.com/ScottSmith95/Decode-for-Ghost/archive/0.5.3.zip)
+[Download the latest release for Ghost 0.4.2 here](https://github.com/ScottSmith95/Decode-for-Ghost/archive/0.5.4.zip)
 
 A minimal, modern theme, designed to be mobile first and very responsive, Decode is built just for Ghost and uses Ghost's innovative features to present a beautiful and clean blog.
 
