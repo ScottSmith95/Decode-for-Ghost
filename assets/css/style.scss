@@ -516,7 +516,9 @@ table.plain {
 		 color: $secondary-accent-color;
 	}
 
-.featured.post {
+.home-template .featured.post,
+.archive-template .featured.post,
+.tag-template .featured.post {
 	box-sizing: border-box;
 	background: darken($background-color, 5%);
 	padding: 2.5%;
