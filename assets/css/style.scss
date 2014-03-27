@@ -3,15 +3,15 @@
    ========================================================================== */
 
 /*
-   0.   Includes
-   1.   Icons
-   2.   Base Styles
-   3.   Utilities
-   4.   General
-   5.   Single Post
-   6.   Pagination
-   7.   Footer
-   8.   Media Queries
+   0.	Includes
+   1.	Icons
+   2.	Base Styles
+   3.	Utilities
+   4.	General
+   5.	Single Post
+   6.	Pagination
+   7.	Footer
+   8.	Media Queries
  */
 
 /* ==========================================================================
@@ -65,27 +65,27 @@
    ========================================================================== */
 
 html {
-    height: 100%;
-    max-height: 100%;
+	height: 100%;
+	max-height: 100%;
 }
 
 body {
-    font: normal 300 110%/1.5 $font-family;
-    color: $text-color;
-    background: $background-color;
+	font: normal 300 110%/1.5 $font-family;
+	color: $text-color;
+	background: $background-color;
 }
 
 ::selection {
-    color: $text-color;
-    background: $highlight-color;
-    text-shadow: none;
+	color: $text-color;
+	background: $highlight-color;
+	text-shadow: none;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
 }
 
 a {
@@ -96,11 +96,11 @@ a {
 }
 
 	a:hover {
-	    color: $accent-color;
+		 color: $accent-color;
 	}
 	
 	a:active {
-	    color: $secondary-accent-color;
+		 color: $secondary-accent-color;
 	}
 
 .post-excerpt a,
@@ -115,161 +115,156 @@ a {
 	.post-content a:hover,
 	.author-card a:hover,
 	.post-meta a:hover {
-	    border-bottom: 1px solid $accent-color;
+		 border-bottom: 1px solid $accent-color;
 	}
 	
 	.post-excerpt a:active,
 	.post-content a:active,
 	.author-card a:active,
 	.post-meta a:active {
-	    border-bottom: 1px solid $secondary-accent-color;
+		 border-bottom: 1px solid $secondary-accent-color;
 	}
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: $text-color;
+	color: $text-color;
 }
 
 
 p, ul, ol {
-    margin: 1.6em 0;
+	margin: 1.6em 0;
 }
 
 ol ol, ul ul,
 ul ol, ol ul {
-    margin: 0.4em 0;
+	margin: 0.4em 0;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #efefef;
-    margin: 3.2em 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #efefef;
+	margin: 3.2em 0;
+	padding: 0;
 }
 
 blockquote {
-    box-sizing: border-box;
-    margin: 0;
-    padding-left: 1.2em;
-    border-left: $accent-color 0.15em solid;
-    quotes: "“" "”";
-}
-
-blockquote > p:first-child:before {
-	content: open-quote;
+	box-sizing: border-box;
+	margin: 0;
+	border-left: $accent-color 0.15em solid;
+	quotes: '“' '”';
 }
 
 blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
+	margin: 0.8em 0;
+	font-style: italic;
 }
 
 blockquote small {
-    display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;
-    font-size: 0.9em;
-    color: #ccc;
+	display: inline-block;
+	margin: 0.8em 0 0.8em 1.5em;
+	font-size: 0.9em;
+	color: #ccc;
 }
 
 blockquote small:before { content: '\2014 \00A0'; }
 
 blockquote cite {
-    font-weight:bold;
+	font-weight:bold;
 }
 
 blockquote cite a { font-weight: normal; }
 
 
 dl {
-    margin: 1.6em 0;
+	margin: 1.6em 0;
 }
 
 dl dt {
-    float: left;
-    width: 180px;
-    overflow: hidden;
-    clear: left;
-    text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-bottom: 1em
+	float: left;
+	width: 180px;
+	overflow: hidden;
+	clear: left;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+	margin-bottom: 1em
 }
 
 dl dd {
-    margin-left: 200px;
-    margin-bottom: 1em
+	margin-left: 200px;
+	margin-bottom: 1em
 }
 
 mark {
-    background-color: #ffc336;
+	background-color: #ffc336;
 }
 
 code, tt {
-    padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.85em;
-    white-space: pre;
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
-    border-radius: 2px;
+	padding: 1px 3px;
+	font-family: Inconsolata, monospace, sans-serif;
+	font-size: 0.85em;
+	white-space: pre;
+	border: 1px solid #E3EDF3;
+	background: #F7FAFB;
+	border-radius: 2px;
 }
 
 pre {
-    box-sizing: border-box;
-    margin: 1.6em 0;
-    border: 1px solid #E3EDF3;
-    width: 100%;
-    padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
-    white-space: pre;
-    overflow: auto;
-    background: #F7FAFB;
-    border-radius: 3px;
+	box-sizing: border-box;
+	margin: 1.6em 0;
+	border: 1px solid #E3EDF3;
+	width: 100%;
+	padding: 10px;
+	font-family: Inconsolata, monospace, sans-serif;
+	font-size: 0.9em;
+	white-space: pre;
+	overflow: auto;
+	background: #F7FAFB;
+	border-radius: 3px;
 }
 
 pre code, tt {
-    font-size: inherit;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0;
+	font-size: inherit;
+	white-space: pre-wrap;
+	background: transparent;
+	border: none;
+	padding: 0;
 }
 
 kbd {
-    display: inline-block;
-    margin-bottom: 0.4em;
-    padding: 1px 8px;
-    border: #ccc 1px solid;
-    color: #666;
-    text-shadow: #fff 0 1px 0;
-    font-size: 0.9em;
-    font-weight: bold;
-    background: #f4f4f4;
-    border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
-        0 1px 0 0 #fff inset;
+	display: inline-block;
+	margin-bottom: 0.4em;
+	padding: 1px 8px;
+	border: #ccc 1px solid;
+	color: #666;
+	text-shadow: #fff 0 1px 0;
+	font-size: 0.9em;
+	font-weight: bold;
+	background: #f4f4f4;
+	border-radius: 4px;
+	box-shadow: 
+		0 1px 0 rgba(0, 0, 0, 0.2), 
+		0 1px 0 0 #fff inset;
 }
 
 table {
-    box-sizing: border-box;
-    margin: 1.6em 0;
-    width:100%;
-    max-width: 100%;
-    background-color: transparent;
+	box-sizing: border-box;
+	margin: 1.6em 0;
+	width:100%;
+	max-width: 100%;
+	background-color: transparent;
 }
 
 table th,
 table td {
-    padding: 8px;
-    line-height: 20px;
-    text-align: left;
-    vertical-align: top;
-    border-top: 1px solid #efefef;
+	padding: 8px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #efefef;
 }
 
 table th { color: #000; }
@@ -280,7 +275,7 @@ table colgroup + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-    border-top: 0;
+	border-top: 0;
 }
 
 table tbody + tbody { border-top: 2px solid #efefef; }
@@ -289,14 +284,14 @@ table table table { background-color: #fff; }
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-    background-color: #f6f6f6;
+	background-color: #f6f6f6;
 }
 
 table.plain {
-    tbody > tr:nth-child(odd) > td,
-    tbody > tr:nth-child(odd) > th {
-        background: transparent;
-    }
+	tbody > tr:nth-child(odd) > td,
+	tbody > tr:nth-child(odd) > th {
+		background: transparent;
+	}
 }
 
 
@@ -306,34 +301,34 @@ table.plain {
 
 /* Hides junk */
 .hidden {
-    text-indent: -9999px;
-    visibility: hidden;
-    display: none;
+	text-indent: -9999px;
+	visibility: hidden;
+	display: none;
 }
 
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 /* Centers vertically (IE8+) */
 .vertical {
-    display: table-cell;
-    vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 /* Micro Clearfix */
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .cf:after {
-    clear: both;
+	clear: both;
 }
 
 
@@ -354,8 +349,9 @@ table.plain {
 	top: 0;
 }
 
-.home-template.blog-has-cover .site-main.home,
-.archive-template.blog-has-cover .site-main.home {
+.home-template.blog-has-cover .site-main,
+.archive-template.blog-has-cover .site-main,
+.tag-template.blog-has-cover .site-main {
 	position: relative; /* Create stacking context and set height above cover photo */
 	z-index: 2;
 	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
@@ -366,7 +362,10 @@ table.plain {
 .home-template.blog-has-cover .site-footer,
 .archive-template.blog-has-cover .site-header,
 .archive-template.blog-has-cover .site-content,
-.archive-template.blog-has-cover .site-footer {
+.archive-template.blog-has-cover .site-footer,
+.tag-template.blog-has-cover .site-header,
+.tag-template.blog-has-cover .site-content,
+.tag-template.blog-has-cover .site-footer {
 	position: relative;
 	top: -3em;
 }
@@ -378,7 +377,7 @@ table.plain {
 	z-index: 2;
 	height: 6em;
 	width: auto;
-    display: block;
+	display: block;
 	margin: 0 auto;
 	user-drag: none;
 }
@@ -396,37 +395,40 @@ table.plain {
 	}
 	
 	.home-template .blog-logo img,
-	.archive-template .blog-logo img {
+	.archive-template .blog-logo img,
+	.tag-template .blog-logo img {
 		filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.25));
 		margin-top: 0;
 	}
 
 	.home-template .blog-logo img:hover,
-	.archive-template .blog-logo img:hover {
+	.archive-template .blog-logo img:hover,
+	.tag-template .blog-logo img:hover {
 		opacity: 1;
 	}
 	
 	.home-template .blog-logo img:active,
-	.archive-template .blog-logo img:active {
+	.archive-template .blog-logo img:active,
+	.tag-template .blog-logo img:active {
 		opacity: 1;
 	}
 
 /* Big cover image on the home page */
 .site-header {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 1.5%;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 1.5%;
 	border-bottom: 1px solid $accent-color;
 	margin: 0 auto 3.5%;
 }
 
 #back {
-    color: rgba(0,0,0,0.2);
-    position: fixed;
-    top: 8px;
-    left: 8px;
-    padding: 6px;
-    font-size: 16px;
+	color: rgba(0,0,0,0.2);
+	position: fixed;
+	top: 8px;
+	left: 8px;
+	padding: 6px;
+	font-size: 16px;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -453,11 +455,11 @@ table.plain {
 	}
 
 .blog-description {
-    margin: 0;
-    font-size: 1em;
-    line-height: 1.5em;
-    font-weight: 300;
-    letter-spacing: 0;
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 300;
+	letter-spacing: 0;
 }
 
 .site-content {
@@ -482,6 +484,7 @@ table.plain {
 }
 
 .post-title {
+	font-size: 1.65em;
 	margin: 0;
 }
 
@@ -489,51 +492,72 @@ table.plain {
 	text-decoration: none;
 }
 
-.post-excerpt p {
-	margin: 1.6rem 0 0 0;
-	line-height: 1.6em;
+/* Make sure nothing jumps outside the post */
+.post-content *,
+.post-excerpt * {
+	max-width: 100%;
 }
 
-.site-content .post h1 {
+/* Excerpt Styles */
+.post-excerpt p {
+	line-height: 1.6em;
+	margin: 1.6rem 0 0 0;
+}
+
+.post-excerpt .excerpt-suffix {
+	color: $text-color;
+}
+
+	.post-excerpt .excerpt-suffix:hover {
+		 color: $accent-color;
+	}
+	
+	.post-excerpt .excerpt-suffix:active {
+		 color: $secondary-accent-color;
+	}
+
+/* Post Styles */
+.post-content h1 {
 	font-size: 2em;
 }
 
-.site-content .post h2 {
+.post-content h2 {
 	font-size: 1.75em;
 }
 
-.site-content .post h3 {
+.post-content h3 {
 	font-size: 1.5em;
 }
 
-.site-content .post h4 {
+.post-content h4 {
 	font-size: 1.375em;
 }
 
-.site-content .post h5 {
+.post-content h5 {
 	font-size: 1.25em;
 }
 
-.site-content .post h6 {
+.post-content h6 {
 	font-size: 1.125em;
 }
 
-.site-content .post img {
+.post-content img {
 	max-width: 100%;
 	margin: 2.5% auto;
 }
 
-.site-content .post .excerpt-suffix {
-	color: $text-color;
+.post-content blockquote {
+	padding: 0.5em 0.25em 0.5em 0.75em;
+	background: darken($background-color, 3.5%);
 }
 
-	.site-content .post .excerpt-suffix:hover {
-	    color: $accent-color;
-	}
-	
-	.site-content .post .excerpt-suffix:active {
-	    color: $secondary-accent-color;
-	}
+.post-content blockquote > p::before {
+	content: open-quote;
+	font-size: 3.5em;
+	line-height: 0;
+	vertical-align: -0.4em;
+	margin-right: 0.25em;
+}
 
 .post-meta {
 	display: inline-block;
@@ -546,12 +570,12 @@ table.plain {
 }
 
 .post-meta a {
-    color: #9EABB3;
-    
+	color: #9EABB3;
+	
 }
 
 .post-footer {
-    padding-bottom: 1.5%;
+	padding-bottom: 1.5%;
 	border-bottom: 1px solid $accent-color;
 }
 
@@ -566,38 +590,38 @@ table.plain {
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
+	margin-top: 0;
+	border-bottom: none;
+	padding-bottom: 0;
 }
 
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
-    display: none;
+	display: none;
 }
 
 /* Keep large images within the bounds of the post-width */
 .post-content img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 /* The author credit area after the post */
 .post-footer {
-    position: relative;
-	margin: 15% auto 0;
+	position: relative;
+	margin: 5% auto 0;
 }
 
 .post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
+	font-size: 1.8rem;
+	margin: 0;
 }
 
 .post-footer p {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    line-height: 1.6em;
+	margin: 1rem 0;
+	font-size: 1.4rem;
+	line-height: 1.6em;
 }
 
 /* Create some space to the right for the share links */
@@ -704,30 +728,30 @@ table.plain {
    ========================================================================== */
 
 .site-footer {
-    position: relative;
-    margin: 5% auto 0;
-    padding: 4rem 0 0;
-    border-top: 1px solid $accent-color;
-    line-height: 1.7em;
-    text-align: center;
-    width: 85%;
+	position: relative;
+	margin: 5% auto 0;
+	padding: 4rem 0 0;
+	border-top: 1px solid $accent-color;
+	line-height: 1.7em;
+	text-align: center;
+	width: 85%;
 }
 
 .site-footer a {
-    color: $secondary-text-color;
+	color: $secondary-text-color;
 }
 
 	.site-footer a:hover {
-	    color: $accent-color;
+		 color: $accent-color;
 	}
 
 .poweredby .icon-ghost {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .poweredby .icon-ghost::before {
-    font-size: 1rem;
-    margin-right: 0.2em;
+	font-size: 1rem;
+	margin-right: 0.2em;
 }
 
 /* The subscribe icon on the footer */
@@ -738,11 +762,11 @@ table.plain {
 	top: -25px;
 	left: 50%;
 	margin-left: -25px;
-    text-align: center;
-    line-height: 2.4rem;
-    border-radius: 50%;
-    background-color: $accent-color;
-    transition: background-color 0.5s;
+	text-align: center;
+	line-height: 2.4rem;
+	border-radius: 50%;
+	background-color: $accent-color;
+	transition: background-color 0.5s;
 }
 
 /* The RSS icon, inserted via icon font */
@@ -752,55 +776,55 @@ table.plain {
 	position: absolute;
 	top: 5px;
 	left: 12px;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 	.subscribe:hover {
-	    background-color: #6CB4D4;
+		 background-color: #6CB4D4;
 	}
 	
 	.subscribe:active {
-	    background-color: #31abdb;
+		 background-color: #31abdb;
 	}
 
 /* CSS tooltip saying "RSS" - initially hidden */
 .tooltip {
-    opacity:0;
-    display: inline-block;
-    padding: 4px 8px 5px 8px;
-    position: absolute;
-    top: -23px;
-    left: -1px;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
-    font-weight: bold;
-    line-height: 1em;
-    text-align: center;
-    background: #50585D;
-    border-radius: 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    transition: opacity 0.3s ease, top 0.3s ease;
+	opacity:0;
+	display: inline-block;
+	padding: 4px 8px 5px 8px;
+	position: absolute;
+	top: -23px;
+	left: -1px;
+	color: rgba(255,255,255,0.9);
+	font-size: 1.1rem;
+	font-weight: bold;
+	line-height: 1em;
+	text-align: center;
+	background: #50585D;
+	border-radius: 20px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+	transition: opacity 0.3s ease, top 0.3s ease;
 }
 
 /* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after {
-    content: "";
-    border-width: 5px 5px 0 5px;
-    border-style: solid;
-    border-color: #50585D transparent;
-    display: block;
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    margin-left:-5px;
-    z-index: 220;
-    width: 0;
+	content: "";
+	border-width: 5px 5px 0 5px;
+	border-style: solid;
+	border-color: #50585D transparent;
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	margin-left:-5px;
+	z-index: 220;
+	width: 0;
 }
 
 /* On hover, show the tooltip! */
 .subscribe:hover .tooltip {
-    opacity: 1;
-    top: -33px;
+	opacity: 1;
+	top: -33px;
 }
 
 /* ==========================================================================
@@ -823,7 +847,10 @@ table.plain {
 .home-template.blog-has-cover .site-footer,
 .archive-template.blog-has-cover .site-header,
 .archive-template.blog-has-cover .site-content,
-.archive-template.blog-has-cover .site-footer {
+.archive-template.blog-has-cover .site-footer,
+.tag-template.blog-has-cover .site-header,
+.tag-template.blog-has-cover .site-content,
+.tag-template.blog-has-cover .site-footer {
 	top: -4.25em;
 }
 
@@ -840,8 +867,7 @@ table.plain {
 }
 
 .post-footer {
-    width: 85%;
-	margin-top: 15%;
+	width: 85%;
 }
 
 .author-card {
@@ -876,27 +902,31 @@ table.plain {
 	font-size: 2.8em;
 }
 
-.site-content .post h1 {
+.post-title {
+	font-size: 2em;
+}
+
+.post-content h1 {
 	font-size: 2.5em;
 }
 
-.site-content .post h2 {
+.post-content h2 {
 	font-size: 2.125em;
 }
 
-.site-content .post h3 {
+.post-content h3 {
 	font-size: 1.75em;
 }
 
-.site-content .post h4 {
+.post-content h4 {
 	font-size: 1.375em;
 }
 
-.site-content .post h5 {
+.post-content h5 {
 	font-size: 1.25em;
 }
 
-.site-content .post h6 {
+.post-content h6 {
 	font-size: 1.125em;
 }
 }

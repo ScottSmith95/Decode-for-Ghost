@@ -25,6 +25,14 @@
 </head>
 <body class="{{body_class}} {{#if @blog.cover}}blog-has-cover{{/if}}">
 
+{{#if posts}}
+{{#if @blog.cover}}
+	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
+	
+	<div class="site-main">
+{{/if}}
+{{/if}}
+
 	{{! Everything else gets inserted here }}
 	{{{body}}}
 
@@ -36,7 +44,10 @@
 			 <section class="themeinfo"><a href="http://scotthsmith.com/projects/decode/">Decode</a> by <a href="http://scotthsmith.com">Scott Smith</a></section>
 		</div>
 	</footer>
-</div>
+
+{{#if posts}}
+	</div> {{! end .site-main }}
+{{/if}}
 	
 	{{! Ghost outputs important scripts and data with this tag }}
 	{{ghost_foot}}
