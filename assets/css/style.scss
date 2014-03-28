@@ -474,7 +474,6 @@ table.plain {
 	width: 92.5%;
 	margin: 5% auto 10%;
 	word-break: break-word;
-	hyphens: auto;
 }
 
 .post:last-of-type {
@@ -505,6 +504,7 @@ table.plain {
 /* Excerpt Styles */
 .post-excerpt p {
 	line-height: 1.6em;
+	hyphens: auto;
 	margin: 1.6rem 0 0 0;
 }
 
@@ -529,6 +529,10 @@ table.plain {
 }
 
 /* Post Styles */
+.post-content p {
+	hyphens: auto;
+}
+
 .post-content h1 {
 	font-size: 2em;
 }
