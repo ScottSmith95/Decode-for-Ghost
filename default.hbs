@@ -29,13 +29,11 @@
 </head>
 <body class="{{body_class}} {{#if @blog.cover}}blog-has-cover{{/if}}">
 
-{{#if posts}}
-{{#if @blog.cover}}
+{{#if posts}}{{#if @blog.cover}}
 	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
 	
 	<div class="site-main">
-{{/if}}
-{{/if}}
+{{/if}}{{/if}}
 
 	{{! Everything else gets inserted here }}
 	{{{body}}}
