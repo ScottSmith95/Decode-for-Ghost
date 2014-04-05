@@ -92,15 +92,15 @@ a {
 	transition: color ease-out 0.4s;
 	color: $accent-color;
 	text-decoration: none;
-	border-bottom: 1px solid rgba(127,127,127,0);
 }
 
 	a:hover {
-		 color: $secondary-accent-color;
+		 color: $accent-color;
 	}
 	
-	a:active {
-		 color: $text-color;
+	a:active, a:focus {
+		 color: $secondary-accent-color;
+		 outline: none;
 	}
 
 .post-excerpt a,
@@ -119,10 +119,10 @@ a {
 		border-bottom-color: $accent-color;
 	}
 	
-	.post-excerpt a:active,
-	.post-content a:active,
-	.author-card a:active,
-	.post-meta a:active {
+	.post-excerpt a:active, .post-excerpt a:focus,
+	.post-content a:active, .post-content a:focus,
+	.author-card a:active, .author-card a:focus,
+	.post-meta a:active, .post-meta a:focus {
 		color: $secondary-accent-color;
 		border-bottom-color: $secondary-accent-color;
 	}
