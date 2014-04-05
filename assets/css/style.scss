@@ -96,11 +96,11 @@ a {
 }
 
 	a:hover {
-		 color: $accent-color;
+		 color: $secondary-accent-color;
 	}
 	
 	a:active {
-		 color: $secondary-accent-color;
+		 color: $text-color;
 	}
 
 .post-excerpt a,
@@ -108,21 +108,23 @@ a {
 .author-card a,
 .post-meta a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
-	border-bottom: 0 solid rgba(127,127,127,0);
+	border-bottom: 1px solid rgba(127,127,127,0);
 }
 		
 	.post-excerpt a:hover,
 	.post-content a:hover,
 	.author-card a:hover,
 	.post-meta a:hover {
-		 border-bottom: 1px solid $accent-color;
+		color: $accent-color;
+		border-bottom-color: $accent-color;
 	}
 	
 	.post-excerpt a:active,
 	.post-content a:active,
 	.author-card a:active,
 	.post-meta a:active {
-		 border-bottom: 1px solid $secondary-accent-color;
+		color: $secondary-accent-color;
+		border-bottom-color: $secondary-accent-color;
 	}
 
 h1 a, h2 a, h3 a,
