@@ -160,7 +160,6 @@ blockquote {
 
 blockquote p {
 	margin: 0.8em 0;
-	font-style: italic;
 }
 
 blockquote small {
@@ -572,6 +571,7 @@ table.plain {
 .post-content blockquote > p::before {
 	content: open-quote;
 	font-size: 3.5em;
+	font-style: italic;
 	line-height: 0;
 	vertical-align: -0.4em;
 	margin-right: 0.25em;
