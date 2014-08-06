@@ -29,9 +29,9 @@
 
 {{#if posts}}{{#if @blog.cover}}
 	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
-	
-	<div class="site-main">
 {{/if}}{{/if}}
+
+<div class="site-main">
 
 	{{! Everything else gets inserted here }}
 	{{{body}}}
@@ -45,9 +45,7 @@
 		</div>
 	</footer>
 
-{{#if posts}}
-	</div> {{! end .site-main }}
-{{/if}}
+</div> {{! end .site-main }}
 	
 	{{! Ghost outputs important scripts and data with this tag }}
 	{{ghost_foot}}
