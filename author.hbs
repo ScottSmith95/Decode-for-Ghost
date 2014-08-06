@@ -1,17 +1,25 @@
 {{!< default}}
 
-{{#if @blog.logo}}
+{{#if author.image}}
 	<div class="page-scroll">
-		<img class="page-drop-logo blog-logo" src="{{@blog.logo}}" alt="Blog Logo">
+		<img class="page-drop-logo author-image" src="{{author.image}}" alt="{{author.name}}'s Image">
 {{/if}}
 <div class="site-main">
 
-<header class="site-header">	
-	{{#if @blog.title}}<h1 class="blog-title">{{@blog.title}}</h1>{{/if}}
-	{{#if @blog.description}}<h2 class="blog-description">{{@blog.description}}</h2>{{/if}}
+<header class="site-header">
+	{{#author}}
+		<section class="author-card cf">
+			<div class="author-meta">
+				 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</span>{{/if}}
+				 {{#if website}}<a href="{{website}}" class="author-website" rel="author">Website</a>{{/if}}
+				 {{#if location}}<div class="author-location">{{location}}</div>{{/if}}
+				 {{#if bio}}<p class="author-bio">{{bio}}</p>{{/if}}
+			</div>
+		</section>
+	{{/author}}
 </header>
 
-{{! The main content area on the homepage }}
+{{! The main content area }}
 <main class="site-content" role="main">
 
 	{{! Each post will be output using this markup }}

@@ -72,7 +72,10 @@ html {
 body {
 	font: normal 300 110%/1.5 $font-family;
 	color: $text-color;
-	background: $background-color;
+	background-color: $background-color;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 ::selection {
@@ -337,92 +340,80 @@ table.plain {
    4. General
    ========================================================================== */
 
-
-.blog-cover {
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	display: block;
-	position: relative;
-	z-index: 1;
-	width: 100%;
-	height: 7.5em;
-	top: 0;
-}
-
-.home-template.blog-has-cover .site-main,
-.archive-template.blog-has-cover .site-main,
-.tag-template.blog-has-cover .site-main {
-	position: relative; /* Create stacking context and set height above cover photo */
-	z-index: 2;
-	box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
-	transform: translateZ(0); // Turn on GPU acceleration to get smooth scrolling
-}
-
-.home-template.blog-has-cover .site-header,
-.home-template.blog-has-cover .site-content,
-.home-template.blog-has-cover .site-footer,
-.archive-template.blog-has-cover .site-header,
-.archive-template.blog-has-cover .site-content,
-.archive-template.blog-has-cover .site-footer,
-.tag-template.blog-has-cover .site-header,
-.tag-template.blog-has-cover .site-content,
-.tag-template.blog-has-cover .site-footer {
-	position: relative;
-	top: -3em;
-}
-
-.blog-logo img {
+.blog-logo, .blog-logo img, .page-drop-logo {
 	transition: opacity 0.5s ease-out;
 	opacity: 1;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	height: 6em;
 	width: auto;
-	display: block;
 	margin: 0 auto;
+	display: block;
 	user-drag: none;
 }
 
-.blog-logo img {
-	margin-top: 2.5%;
-}
-
-	.blog-logo img:hover {
+	.blog-logo a img:hover {
 		opacity: 0.75;
 	}
 	
-	.blog-logo img:active {
+	.blog-logo a img:active {
 		opacity: 0.85;
 	}
-	
-	.home-template .blog-logo img,
-	.archive-template .blog-logo img,
-	.tag-template .blog-logo img {
-		filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
-		backface-visibility: hidden; // A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/
-		margin-top: 0;
-	}
 
-	.home-template .blog-logo img:hover,
-	.archive-template .blog-logo img:hover,
-	.tag-template .blog-logo img:hover {
-		opacity: 1;
+
+/*
+	Fancy page headers
+*/
+.home-template,
+.archive-template,
+.tag-template,
+.author-template {
+	&.blog-has-cover .site-main {
+		position: relative; /* Create stacking context and set height above cover photo */
+		z-index: 2;
+		box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
+		transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
+		top: -3em;
+		padding-top: 3em;
 	}
 	
-	.home-template .blog-logo img:active,
-	.archive-template .blog-logo img:active,
-	.tag-template .blog-logo img:active {
-		opacity: 1;
+	.site-main {
+		background: $background-color;
 	}
+	
+	.featured.post {
+		box-sizing: border-box;
+		background: darken($background-color, 5%);
+		padding: 2.5%;
+	}
+}
 
-/* Big cover image on the home page */
+.page-drop-logo {
+	filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
+	backface-visibility: hidden; // A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/
+	margin-top: 0;
+	
+	&.author-image {
+		border-radius: 50%;
+	}
+}
+
+.page-scroll {
+	margin-top: 5em;
+	position: relative;
+}
+
 .site-header {
 	width: 100%;
 	text-align: center;
 	padding-bottom: 1.5%;
 	border-bottom: 1px solid $accent-color;
 	margin: 0 auto 3.5%;
+	
+	.post-template &,
+	.page-template & {
+		margin-top: 2.5%;
+	}
 }
 
 #back {
@@ -520,14 +511,6 @@ table.plain {
 	.post-excerpt .excerpt-suffix:active {
 		 color: $secondary-accent-color;
 	}
-
-.home-template .featured.post,
-.archive-template .featured.post,
-.tag-template .featured.post {
-	box-sizing: border-box;
-	background: darken($background-color, 5%);
-	padding: 2.5%;
-}
 
 /* Post Styles */
 .post-content p {
@@ -645,45 +628,67 @@ table.plain {
 /* Create some space to the right for the share links */
 .author-card {
 	transition: box-shadow 0.35s ease-out;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+	text-align: left;
 	padding: 3.5%;
 	margin: 0 auto 15%;
-	text-align: left;
-}
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 
-	.author-card:hover {
+	&:hover {
 		box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
 	}
 
-.author-card .author-image {
-	float: left;
-	width: 25%;
-	max-width: 125px;
+	.author-image {
+		float: left;
+		width: 25%;
+		max-width: 125px;
+		margin: 0;
+		
+		img {
+			transition: box-shadow 0.35s ease-out;
+			display: block;
+			max-width: 100%;
+			margin: 0;
+			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(0,0,0,0);
+			
+			&:hover {
+				box-shadow: 0 2px 5px rgba(0,0,0,.5);
+			}
+		}
+	}
+	
+	.author-meta {
+		float: left;
+		margin-left: 5%;
+	}
+	
+	.author-name {
+		color: $text-color;
+		font-size: 1.6em;
+		font-weight: normal;
+	}
+	
+	.author-website {
+		margin-left: 1.5%;
+	}
+	
+	.author-bio {
+		font-size: 0.9em;
+		margin: 1% auto;
+	}
 }
 
-.author-card .author-image img {
-	border-radius: 50%;
-	display: block;
-	max-width: 100%;
-	margin: 0;
-}
-
-.author-card .author-text {
-	margin-left: 5%;
-}
-
-.author-card .author-name {
-	font-size: 1.6em;
-	font-weight: normal;
-}
-
-.author-card .author-website {
-	margin-left: 1.5%;
-}
-
-.author-card .author-bio {
-	font-size: 0.9em;
-	margin: 1% auto;
+.site-header {
+	.author-card {
+		display: inline-block;
+		min-width: 50%;
+		text-align: center;
+		margin: 3.5% auto 1.5%;
+	}
+	.author-meta {
+		float: none;
+		margin-left: 0;
+	}
 }
 
 /* ==========================================================================
@@ -853,6 +858,18 @@ table.plain {
 /* Tablets
 --------------------------------------- */
 @media only screen and (min-width: 35em) {
+.page-scroll {
+	margin-top: 50vh;
+}
+
+.home-template.blog-has-cover .site-main,
+.archive-template.blog-has-cover .site-main,
+.tag-template.blog-has-cover .site-main,
+.author-template.blog-has-cover .site-main {
+	top: -4.25em;
+	padding-top: 4.25em;
+}
+
 .site-header, .site-content {
 	width: 82.5%;
 }
@@ -861,23 +878,11 @@ table.plain {
 	width: 75%;
 }
 
-.home-template.blog-has-cover .site-header,
-.home-template.blog-has-cover .site-content,
-.home-template.blog-has-cover .site-footer,
-.archive-template.blog-has-cover .site-header,
-.archive-template.blog-has-cover .site-content,
-.archive-template.blog-has-cover .site-footer,
-.tag-template.blog-has-cover .site-header,
-.tag-template.blog-has-cover .site-content,
-.tag-template.blog-has-cover .site-footer {
-	top: -4.25em;
-}
-
 .blog-cover {
 	height: 15em;
 }
 
-.blog-logo img {
+.blog-logo, .blog-logo img, .page-drop-logo {
 	height: 8.5em;
 }
 
@@ -974,5 +979,5 @@ table.plain {
 
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
-   below this point, or it will probably fuck everything up.
+   below this point.
    ========================================================================== */

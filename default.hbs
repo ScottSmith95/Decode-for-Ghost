@@ -25,14 +25,8 @@
 	{{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} {{#if @blog.cover}}blog-has-cover{{/if}}">
-
-{{#if posts}}{{#if @blog.cover}}
-	<div class="blog-cover" style="background-image: url({{@blog.cover}});"></div>
-{{/if}}{{/if}}
-
-<div class="site-main">
-
+<body class="{{body_class}}{{#if posts}}{{#if @blog.cover}} blog-has-cover{{/if}}{{/if}}" {{#if posts}}{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}>
+	
 	{{! Everything else gets inserted here }}
 	{{{body}}}
 
@@ -46,7 +40,8 @@
 	</footer>
 
 </div> {{! end .site-main }}
-	
+{{#if @blog.logo}}</div> {{! end .page-scroll }} {{/if}}
+
 	{{! Ghost outputs important scripts and data with this tag }}
 	{{ghost_foot}}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.3/jquery.fitvids.min.js"></script>
