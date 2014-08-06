@@ -2,16 +2,14 @@
 <html>
 <head>
 	{{! Document Settings }}
-	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	{{! Page Meta }}
 	<title>{{meta_title}}</title>
 	<meta name="description" content="{{meta_description}}">
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta property="og:title" content="{{meta_title}}">
-	<meta property="og:type" content="website">
 	{{{block "meta"}}}
 
 	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
@@ -25,7 +23,7 @@
 	{{#if pagination.prev}}<link href="{{page_url pagination.prev}}" rel="prefetch">{{/if}}
 
 	{{! Ghost outputs important style and meta data with this tag }}
-	{{ghost_head}}
+    {{ghost_head}}
 </head>
 <body class="{{body_class}} {{#if @blog.cover}}blog-has-cover{{/if}}">
 
