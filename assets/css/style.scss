@@ -340,14 +340,14 @@ table.plain {
    4. General
    ========================================================================== */
 
-.blog-logo, .blog-logo img, .page-drop-logo {
+.blog-logo, .page-drop-logo {
 	transition: opacity 0.5s ease-out;
 	opacity: 1;
 	position: relative;
 	z-index: 3;
 	height: 6em;
 	width: auto;
-	margin: 0 auto;
+	margin: 2.5% auto 0;
 	display: block;
 	user-drag: none;
 }
@@ -361,20 +361,47 @@ table.plain {
 	}
 
 
-/*
+/*************************
 	Fancy page headers
-*/
+*************************/
 .home-template,
 .archive-template,
 .tag-template,
 .author-template {
-	&.blog-has-cover .site-main {
-		position: relative; /* Create stacking context and set height above cover photo */
-		z-index: 2;
-		box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
-		transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
-		top: -3em;
-		padding-top: 3em;
+	&.blog-has-cover {
+		.page-drop-logo {
+			filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
+			backface-visibility: hidden; // A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/
+		}
+
+		.site-main {
+			position: relative; /* Create stacking context and set height above cover photo */
+			z-index: 2;
+			transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
+			margin-top: 15em;
+			box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
+		}
+		
+		.site-header {
+			margin-top: 0;
+		}
+	}
+	
+	&.blog-has-logo {
+		.site-header {
+			margin-top: 0;
+		}
+	}
+	
+	&.blog-has-cover.blog-has-logo {
+		.blog-logo,
+		.page-drop-logo {
+			margin-top: 0;
+		}
+		
+		.site-main {
+			margin-top: 0;
+		}
 	}
 	
 	.site-main {
@@ -387,15 +414,18 @@ table.plain {
 		padding: 2.5%;
 	}
 }
-
-.page-drop-logo {
-	filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
-	backface-visibility: hidden; // A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/
-	margin-top: 0;
-	
-	&.author-image {
-		border-radius: 50%;
+.home-template.blog-has-cover.blog-has-logo .site-main,
+.archive-template.blog-has-cover.blog-has-logo .site-main,
+.tag-template.blog-has-cover.blog-has-logo .site-main,
+.author-template.blog-has-cover.author-has-image .site-main  {
+	.site-main {
+		top: -3em;
+		padding-top: 3em;
 	}
+}
+
+.page-drop-logo.author-image {
+	border-radius: 50%;
 }
 
 .page-scroll {
@@ -408,12 +438,7 @@ table.plain {
 	text-align: center;
 	padding-bottom: 1.5%;
 	border-bottom: 1px solid $accent-color;
-	margin: 0 auto 3.5%;
-	
-	.post-template &,
-	.page-template & {
-		margin-top: 2.5%;
-	}
+	margin: 2.5% auto 3.5%;
 }
 
 #back {
@@ -427,11 +452,11 @@ table.plain {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-	margin: 0 auto;
 	font-size: 1.75em;
 	font-weight: normal;
 	letter-spacing: -1px;
-	margin: 10px 0 10px;
+	padding: 10px 0 10px;
+	margin: 0 auto;
 }
 
 .blog-title a {
@@ -685,6 +710,7 @@ table.plain {
 		text-align: center;
 		margin: 3.5% auto 1.5%;
 	}
+	
 	.author-meta {
 		float: none;
 		margin-left: 0;
@@ -862,10 +888,10 @@ table.plain {
 	margin-top: 50vh;
 }
 
-.home-template.blog-has-cover .site-main,
-.archive-template.blog-has-cover .site-main,
-.tag-template.blog-has-cover .site-main,
-.author-template.blog-has-cover .site-main {
+.home-template.blog-has-cover.blog-has-logo .site-main,
+.archive-template.blog-has-cover.blog-has-logo .site-main,
+.tag-template.blog-has-cover.blog-has-logo .site-main,
+.author-template.blog-has-cover.author-has-image .site-main {
 	top: -4.25em;
 	padding-top: 4.25em;
 }
@@ -882,7 +908,7 @@ table.plain {
 	height: 15em;
 }
 
-.blog-logo, .blog-logo img, .page-drop-logo {
+.blog-logo, .page-drop-logo {
 	height: 8.5em;
 }
 

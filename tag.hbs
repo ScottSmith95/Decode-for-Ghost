@@ -1,9 +1,11 @@
 {{!< default}}
 
-{{#if @blog.logo}}
+{{#if @blog.cover}}
 	<div class="page-scroll">
-		<img class="page-drop-logo blog-logo" src="{{@blog.logo}}" alt="Blog Logo">
 {{/if}}
+	{{#if @blog.logo}}
+		<a href="{{@blog.url}}"><img class="page-drop-logo blog-logo" src="{{@blog.logo}}" alt="Blog Logo"></a>
+	{{/if}}
 <div class="site-main">
 
 <header class="site-header">
