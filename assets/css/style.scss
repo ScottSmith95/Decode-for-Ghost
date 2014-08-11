@@ -73,7 +73,9 @@ body {
 	font: normal 300 110%/1.5 $font-family;
 	color: $text-color;
 	background-color: $background-color;
+	background-position: center;
 	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
