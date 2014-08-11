@@ -414,10 +414,10 @@ table.plain {
 		padding: 2.5%;
 	}
 }
-.home-template.blog-has-cover.blog-has-logo .site-main,
-.archive-template.blog-has-cover.blog-has-logo .site-main,
-.tag-template.blog-has-cover.blog-has-logo .site-main,
-.author-template.blog-has-cover.author-has-image .site-main  {
+.home-template.blog-has-cover.blog-has-logo,
+.archive-template.blog-has-cover.blog-has-logo
+.tag-template.blog-has-cover.blog-has-logo,
+.author-template.blog-has-cover.author-has-image {
 	.site-main {
 		top: -3em;
 		padding-top: 3em;
@@ -889,12 +889,14 @@ table.plain {
 	margin-top: 50vh;
 }
 
-.home-template.blog-has-cover.blog-has-logo .site-main,
-.archive-template.blog-has-cover.blog-has-logo .site-main,
-.tag-template.blog-has-cover.blog-has-logo .site-main,
-.author-template.blog-has-cover.author-has-image .site-main {
-	top: -4.25em;
-	padding-top: 4.25em;
+.home-template.blog-has-cover.blog-has-logo,
+.archive-template.blog-has-cover.blog-has-logo,
+.tag-template.blog-has-cover.blog-has-logo,
+.author-template.blog-has-cover.author-has-image {
+	.site-main {
+		top: -4.25em;
+		padding-top: 4.25em;
+	}
 }
 
 .site-header, .site-content {
