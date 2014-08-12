@@ -338,7 +338,7 @@ table.plain {
    4. General
    ========================================================================== */
 
-.blog-logo, .page-drop-logo {
+.blog-logo, .header-logo {
 	transition: opacity 0.5s ease-out;
 	opacity: 1;
 	position: relative;
@@ -367,7 +367,7 @@ table.plain {
 .tag-template,
 .author-template {
 	&.blog-has-cover {
-		.page-drop-logo {
+		.header-logo {
 			filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
 			backface-visibility: hidden; // A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/
 		}
@@ -393,7 +393,7 @@ table.plain {
 	
 	&.blog-has-cover.blog-has-logo {
 		.blog-logo,
-		.page-drop-logo {
+		.header-logo {
 			margin-top: 0;
 		}
 		
@@ -422,7 +422,7 @@ table.plain {
 	}
 }
 
-.page-drop-logo.author-image {
+.header-logo.author-image {
 	border-radius: 50%;
 }
 
@@ -910,7 +910,7 @@ table.plain {
 	height: 15em;
 }
 
-.blog-logo, .page-drop-logo {
+.blog-logo, .header-logo {
 	height: 8.5em;
 }
 
