@@ -1,0 +1,19 @@
+{
+  "name": "Decode for Ghost",
+  "version": "0.6.2",
+  "homepage": "http://scotthsmith.com/projects/decode/",
+  "authors": [
+    "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "FitVids": "~1.1.0",
+    "normalize-css": "~3.0.1"
+  }
+}

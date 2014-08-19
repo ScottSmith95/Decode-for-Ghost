@@ -1,4 +1,20 @@
 {
-  "name": "Decode",
-  "version": "0.6.2"
+  "name": "Decode for Ghost",
+  "version": "0.6.2",
+  "author": "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScottSmith95/Decode-for-Ghost.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-bower": "^0.0.6",
+    "gulp-concat": "^2.3.4",
+    "gulp-csscomb": "^3.0.2",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-sass": "^0.7.2",
+    "gulp-sourcemaps": "^1.1.0",
+    "gulp-uglify": "^0.3.1"
+  }
 }
