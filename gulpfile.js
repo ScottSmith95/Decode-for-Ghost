@@ -9,7 +9,7 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:     'assets/styles/*.scss',
+	styles:     ['assets/styles/*.scss', 'bower_components/normalize-css/normalize.css'],
 	scripts:    ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 
