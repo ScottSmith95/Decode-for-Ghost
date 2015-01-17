@@ -363,7 +363,6 @@ table.plain {
 	Fancy page headers
 *************************/
 .home-template,
-.archive-template,
 .tag-template,
 .author-template {
 	&.blog-has-cover {
@@ -413,7 +412,6 @@ table.plain {
 	}
 }
 .home-template.blog-has-cover.blog-has-logo,
-.archive-template.blog-has-cover.blog-has-logo,
 .tag-template.blog-has-cover.blog-has-logo,
 .author-template.blog-has-cover.author-has-image {
 	.site-main {
@@ -889,7 +887,6 @@ table.plain {
 }
 
 .home-template.blog-has-cover.blog-has-logo,
-.archive-template.blog-has-cover.blog-has-logo,
 .tag-template.blog-has-cover.blog-has-logo,
 .author-template.blog-has-cover.author-has-image {
 	.site-main {
