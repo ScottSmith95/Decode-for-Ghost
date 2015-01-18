@@ -476,6 +476,15 @@ table.plain {
 
 .site-content {
 	margin: 0 auto;
+	
+	header {
+		text-align: center;
+	}
+}
+
+.tag-archive-header {
+	margin: 0 auto;
+	border-bottom: 1px solid $accent-color;
 }
 
 .post {
@@ -909,7 +918,8 @@ table.plain {
 	width: 100%;
 }
 
-.post-footer {
+.post-footer,
+.tag-archive-header {
 	width: 85%;
 }
 
