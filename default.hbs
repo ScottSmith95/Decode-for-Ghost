@@ -29,13 +29,14 @@
 	{{#is "home, index, tag, author"}} fancy-header
 		{{#if @blog.cover}} blog-has-cover{{/if}}
 		{{#if @blog.logo}} blog-has-logo{{/if}}
+		{{#if author.cover}} author-has-cover{{/if}}
 		{{#if author.image}} author-has-image{{/if}}"
 	{{/is}} 
-	{{#is "home, index, post, tag"}}
+	{{#is "home, index, tag"}}
 		{{#if @blog.cover}}style="background-image: url({{@blog.cover}});"{{/if}}
 	{{/is}}
 	{{#is "author"}}
-		{{#if author.cover}}style="background-image: url({{author.cover}});"{{/if}}
+		{{#if @blog.cover}}{{#if author.cover}}style="background-image: url({{author.cover}});"{{else}}style="background-image: url({{@blog.cover}});"{{/if}}{{/if}}
 	{{/is}}>
 	
 	{{! Everything else gets inserted here }}
