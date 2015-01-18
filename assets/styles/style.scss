@@ -492,15 +492,27 @@ table.plain {
 	width: 92.5%;
 	margin: 5% auto 10%;
 	word-break: break-word;
-}
-
-.post:last-of-type {
-	margin-bottom: 0;
+	
+	/* Prevent extra space at the bottom of the page*/
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	/* Keep large images within the bounds of the post-width */
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
 }
 
 .post-header {
 	text-align: center;
 	margin: 0 auto 2.5%;
+}
+
+.post-image {
+	padding-bottom: 1em;
 }
 
 .post-title {
@@ -625,13 +637,6 @@ table.plain {
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
 	display: none;
-}
-
-/* Keep large images within the bounds of the post-width */
-.post-content img {
-	display: block;
-	max-width: 100%;
-	margin: 0 auto;
 }
 
 /* The author credit area after the post */
