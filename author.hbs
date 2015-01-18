@@ -4,7 +4,9 @@
 	<div class="page-scroll">
 {{/if}}
 	{{#if author.image}}
-		<img class="header-logo author-image" src="{{author.image}}" alt="{{author.name}}'s Image">
+		<a href="{{@blog.url}}">
+			<img class="header-logo author-image" src="{{author.image}}" alt="{{author.name}}'s Image">
+		</a>
 	{{/if}}
 
 <div class="site-main">
