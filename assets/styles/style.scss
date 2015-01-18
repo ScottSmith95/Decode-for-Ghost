@@ -362,9 +362,7 @@ table.plain {
 /*************************
 	Fancy page headers
 *************************/
-.home-template,
-.tag-template,
-.author-template {
+.fancy-header {
 	&.blog-has-cover {
 		.header-logo {
 			filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
@@ -411,9 +409,7 @@ table.plain {
 		padding: 2.5%;
 	}
 }
-.home-template.blog-has-cover.blog-has-logo,
-.tag-template.blog-has-cover.blog-has-logo,
-.author-template.blog-has-cover.author-has-image {
+.fancy-header.blog-has-cover.blog-has-logo {
 	.site-main {
 		top: -3em;
 		padding-top: 3em;
@@ -886,9 +882,7 @@ table.plain {
 	margin-top: 50vh;
 }
 
-.home-template.blog-has-cover.blog-has-logo,
-.tag-template.blog-has-cover.blog-has-logo,
-.author-template.blog-has-cover.author-has-image {
+.fancy-header.blog-has-cover.author-has-image {
 	.site-main {
 		top: -4.25em;
 		padding-top: 4.25em;
