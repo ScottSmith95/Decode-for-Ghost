@@ -601,25 +601,25 @@
 	border-radius: 50%;
 	background-color: $accent-color;
 	transition: background-color 0.5s;
-}
 
-/* The RSS icon, inserted via icon font */
-.subscribe::before {
-	color: #FFF;
-	font-size: 26px;
-	position: absolute;
-	top: 5px;
-	left: 12px;
-	font-weight: bold;
-}
+	/* The RSS icon, inserted via icon font */
+	&::before {
+		color: #FFF;
+		font-size: 26px;
+		position: absolute;
+		top: 5px;
+		left: 12px;
+		font-weight: bold;
+	}
 
-	.subscribe:hover {
-		 background-color: #6CB4D4;
+	&:hover {
+		 background-color: $secondary-accent-color;
 	}
 	
-	.subscribe:active {
-		 background-color: #31abdb;
+	&:active {
+		 background-color: $secondary-text-color;
 	}
+}
 
 /* CSS tooltip saying "RSS" - initially hidden */
 .tooltip {
