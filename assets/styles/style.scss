@@ -192,18 +192,18 @@
 	margin: 5% auto 10%;
 	word-break: break-word;
 	
-	/* Prevent extra space at the bottom of the page*/
+	/* Prevent extra space at the bottom of the page. */
 	&:last-of-type {
 		margin-bottom: 0;
 	}
 	
-	/* Prevent extra space at the top of the page*/
+	/* Prevent extra space at the top of the page. */
 	&:first-of-type {
 		margin-top: 0;
 	}
 
 	
-	/* Keep large images within the bounds of the post-width */
+	/* Keep large images within the bounds of the post-width. */
 	img {
 		display: block;
 		max-width: 100%;
@@ -249,7 +249,7 @@
 	text-decoration: none;
 }
 
-/* Make sure nothing jumps outside the post */
+/* Make sure nothing jumps outside the post. */
 .post-content *,
 .post-excerpt * {
 	max-width: 100%;
