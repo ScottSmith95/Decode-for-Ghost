@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 			.pipe(csscomb())
 			.pipe(sass())
 			.pipe(prefix('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR', 'Opera 12.1'))
-			.pipe(addsrc.append('node_modules/normalize.css/normalize.css')) // Pull in Normalize and inject it into the pipline before concatenation
+			.pipe(addsrc.prepend('node_modules/normalize.css/normalize.css')) // Pull in Normalize and inject it into the pipline before concatenation
 			.pipe(concat('style.css'))
 			.pipe(minify({cache: true}))
 		.pipe(sourcemaps.write('./'))
