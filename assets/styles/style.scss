@@ -9,9 +9,10 @@
    3.	Utilities
    4.	General
    5.	Single Post
-   6.	Pagination
-   7.	Footer
-   8.	Media Queries
+   6.	Navigation
+   7.	Pagination
+   8.	Footer
+   9.	Media Queries
  */
 
 /* ==========================================================================
@@ -91,22 +92,27 @@ h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	line-height: 1;
 	margin-top: 0;
+	
+	a {
+		color: $text-color;
+	}
 }
 
 a {
 	transition: color ease-out 0.4s;
 	color: $accent-color;
 	text-decoration: none;
-}
 
-	a:hover {
+	&:hover {
 		 color: $accent-color;
 	}
 	
-	a:active, a:focus {
+	&:active,
+	&:focus {
 		 color: $secondary-accent-color;
 		 outline: none;
 	}
+}
 
 .post-excerpt a,
 .post-content a,
@@ -114,36 +120,29 @@ a {
 .post-meta a {
 	transition: color 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
 	border-bottom: 1px solid rgba(127,127,127,0);
-}
 		
-	.post-excerpt a:hover,
-	.post-content a:hover,
-	.author-card a:hover,
-	.post-meta a:hover {
+	&:hover {
 		color: $accent-color;
 		border-bottom-color: $accent-color;
 	}
 	
-	.post-excerpt a:active, .post-excerpt a:focus,
-	.post-content a:active, .post-content a:focus,
-	.author-card a:active, .author-card a:focus,
-	.post-meta a:active, .post-meta a:focus {
+	&:active,
+	&:focus {
 		color: $secondary-accent-color;
 		border-bottom-color: $secondary-accent-color;
 	}
-
-h1 a, h2 a, h3 a,
-h4 a, h5 a, h6 a {
-	color: $text-color;
 }
 
-
-p, ul, ol {
+p,
+ul,
+ol {
 	margin: 1.6em 0;
 }
 
-ol ol, ul ul,
-ul ol, ol ul {
+ol ol,
+ul ul,
+ul ol,
+ol ul {
 	margin: 0.4em 0;
 }
 
@@ -338,7 +337,8 @@ table.plain {
    4. General
    ========================================================================== */
 
-.blog-logo, .header-logo {
+.blog-logo,
+.header-logo {
 	transition: opacity 0.5s ease-out;
 	opacity: 1;
 	position: relative;
@@ -431,15 +431,6 @@ table.plain {
 	padding-bottom: 1.5%;
 	border-bottom: 1px solid $accent-color;
 	margin: 2.5% auto 3.5%;
-}
-
-#back {
-	color: rgba(0,0,0,0.2);
-	position: fixed;
-	top: 8px;
-	left: 8px;
-	padding: 6px;
-	font-size: 16px;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -726,7 +717,59 @@ table.plain {
 }
 
 /* ==========================================================================
-   6. Pagination
+   6. Navigation
+   ========================================================================== */
+
+.nav {
+	width: 100%;	
+	font-size: 1.1em;
+	text-align: center;
+	clear: both;
+	list-style: none;
+	padding-left: 0;
+	margin: 0 auto;
+	
+	li {
+		display: inline;
+		margin: 0 0.25em;
+	}
+	
+	a {
+		color: $text-color;
+		
+		&:hover {
+			color: $accent-color;
+		}
+		
+		&:active,
+		&:focus {
+			color: $secondary-accent-color;
+		}
+	}
+	
+	.nav-current a {
+		color: $accent-color;
+		
+		&:hover {
+			animation: shake 0.25s ease 0.25s;
+		}
+	}
+}
+
+@keyframes shake {
+	0%, 54%, 90% {
+		transform: translateX(-7px);
+	}
+	18%, 72% {
+		transform: translateX(7px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* ==========================================================================
+   7. Pagination
    ========================================================================== */
 
 /* The main wrapper for our pagination links */
@@ -781,7 +824,7 @@ table.plain {
 
 
 /* ==========================================================================
-   7. Footer - The bottom of every page
+   8. Footer - The bottom of every page
    ========================================================================== */
 
 .site-footer {
@@ -886,7 +929,7 @@ table.plain {
 }
 
 /* ==========================================================================
-   8. Media Queries. The secret sauce that makes Decode awesome
+   9. Media Queries. The secret sauce that makes Decode awesome
    ========================================================================== */
 
 /* Tablets
