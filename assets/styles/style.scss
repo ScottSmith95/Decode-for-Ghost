@@ -197,6 +197,12 @@
 		margin-bottom: 0;
 	}
 	
+	/* Prevent extra space at the top of the page*/
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	
 	/* Keep large images within the bounds of the post-width */
 	img {
 		display: block;
