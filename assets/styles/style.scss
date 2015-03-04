@@ -205,6 +205,30 @@
 	}
 }
 
+/* Full-width featured images. */
+.home-template,
+.archive-template,
+.author-template,
+.tag-template {
+	.post {
+		width: 100%;
+		
+		.post-excerpt,
+		.post-content {
+			width: 92.5%;
+			margin: 0 auto;
+		}
+		
+		.post-footer {
+			width: 92.5%;
+			
+			@media only screen and (min-width: 35em) {
+				width: 85%;
+			}
+		}
+	}
+}
+
 .post-header {
 	text-align: center;
 	margin: 0 auto 2.5%;
