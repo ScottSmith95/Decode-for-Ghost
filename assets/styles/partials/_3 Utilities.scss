@@ -1,0 +1,30 @@
+// 3. Utilities
+// These things get used a lot
+
+/* Hides junk */
+.hidden {
+	text-indent: -9999px;
+	visibility: hidden;
+	display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+/* Centers vertically (IE8+) */
+.vertical {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Micro Clearfix */
+.cf:after {
+	content: "";
+	display: table;
+	clear: both;
+}
