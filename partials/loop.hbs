@@ -1,0 +1,23 @@
+{{! Each post will be output using this markup }}
+{{#foreach posts}}
+
+<article class="{{post_class}}">
+	<header class="post-header">
+		{{#if image}}<a href="{{url}}"><img class="post-image" src="{{image}}"></a>{{/if}}
+		<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+		<a class="post-meta" href="{{url}}">Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
+	</header>
+	
+	<section class="post-excerpt">
+		<p>{{excerpt}}<a href="{{url}}" class="excerpt-suffix">&hellip;</a></p>
+	</section>
+	
+	<footer class="post-footer">
+		<div class="post-tags">{{tags separator=", " prefix="Tagged with: "}}</div>
+	</footer> 
+</article>
+
+{{/foreach}}
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{pagination}}

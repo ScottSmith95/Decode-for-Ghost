@@ -11,6 +11,8 @@
 <header class="site-header">
 	{{#if @blog.title}}<h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>{{/if}}
 	{{#if @blog.description}}<h2 class="blog-description">{{@blog.description}}</h2>{{/if}}
+	
+	{{navigation}}
 </header>
 
 {{! The main content area on the homepage }}
