@@ -264,15 +264,15 @@
 
 .post-excerpt .excerpt-suffix {
 	color: $text-color;
-}
 
-	.post-excerpt .excerpt-suffix:hover {
+	&:hover {
 		 color: $accent-color;
 	}
 	
-	.post-excerpt .excerpt-suffix:active {
+	&:active {
 		 color: $secondary-accent-color;
 	}
+}
 
 /* Post Styles */
 .post-content p {
