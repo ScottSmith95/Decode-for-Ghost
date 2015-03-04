@@ -2,6 +2,7 @@ var gulp       = require('gulp'),
 	csscomb    = require('gulp-csscomb'),
 	sass       = require('gulp-sass'),
 	prefix     = require('gulp-autoprefixer'),
+	addsrc     = require('gulp-add-src'),
 	minify     = require('gulp-minify-css'),
 	bower      = require('gulp-bower');
 	concat     = require('gulp-concat'),
@@ -9,7 +10,7 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:     ['assets/styles/*.scss', 'bower_components/normalize-css/normalize.css'],
+	styles:     ['assets/styles/*.scss'],
 	scripts:    ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 
@@ -23,6 +24,8 @@ gulp.task('styles', function() {
 			.pipe(csscomb())
 			.pipe(sass())
 			.pipe(prefix('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR', 'Opera 12.1'))
+			.pipe(addsrc.append('node_modules/normalize.css/normalize.css')) // Pull in Normalize and inject it into the pipline before concatenation
+			.pipe(concat('style.css'))
 			.pipe(minify({cache: true}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('assets/styles/build/'));

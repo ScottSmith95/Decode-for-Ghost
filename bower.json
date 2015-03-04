@@ -13,7 +13,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "FitVids": "~1.1.0",
-    "normalize-css": "~3.0.2"
+    "FitVids": "~1.1.0"
   }
 }

@@ -17,4 +17,4 @@
         "gulp-sourcemaps": "^1.5.0",
         "gulp-uglify": "^1.1.0"
     }
-}
+}    "gulp-add-src": "^0.2.0",
