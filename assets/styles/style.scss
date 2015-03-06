@@ -141,6 +141,12 @@
 	margin: 2.5% auto 3.5%;
 }
 
+	.author-template {
+		.site-header {
+			margin-top: 0; // Removes spacing above author card.
+		}
+	}
+
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
 	font-size: 1.75em;
