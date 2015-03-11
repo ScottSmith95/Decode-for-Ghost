@@ -152,8 +152,7 @@
 	font-size: 1.75em;
 	font-weight: normal;
 	letter-spacing: -1px;
-	padding: 10px 0 10px;
-	margin: 0 auto;
+	margin: 1.5% auto 0;
 }
 
 .blog-title a {
@@ -172,11 +171,11 @@
 	}
 
 .blog-description {
-	margin: 0;
 	font-size: 1em;
-	line-height: 1.5em;
 	font-weight: 300;
 	letter-spacing: 0;
+	line-height: 1.5em;
+	margin: 0;
 }
 
 .site-content {
@@ -466,7 +465,7 @@
 	clear: both;
 	list-style: none;
 	padding-left: 0;
-	margin: 0 auto;
+	margin: 1.5% auto 0;
 	
 	li {
 		display: inline;
