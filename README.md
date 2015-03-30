@@ -8,3 +8,23 @@ A minimal, modern theme, designed to be mobile first and very responsive, Decode
 Please open an issue here on GitHub if you have any suggestions or problems with the theme.
 
 Copyright (c) 2013-2015 Scott Smith - Released under The MIT License.
+
+### Compiling the CSS
+
+1. Change into the root directory of the theme
+
+    `cd $GhostDir/content/themes/Decoded-for-Ghost/`
+
+2. Install dependencies for npm
+    
+    `npm install`
+
+3. Run Gulp
+    
+    `gulp`
+
+4. Restart Ghost
+    
+    `cd $GhostDir && npm start --production`
+
+5. Profit.
