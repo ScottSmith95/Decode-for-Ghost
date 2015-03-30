@@ -13,18 +13,18 @@ Copyright (c) 2013-2015 Scott Smith - Released under The MIT License.
 
 1. Change into the root directory of the theme
 
-    Ex. `cd $GhostDir/content/themes/Decoded-for-Ghost/`
+    `cd $GhostDir/content/themes/Decoded-for-Ghost/`
 
 2. Install dependencies for npm
     
-    Ex. `npm install`
+    `npm install`
 
 3. Run Gulp
     
-    Ex. `gulp`
+    `gulp`
 
 4. Restart Ghost
     
-    Ex. `cd $GhostDir && npm start --production`
+    `cd $GhostDir && npm start --production`
 
 5. Profit.
