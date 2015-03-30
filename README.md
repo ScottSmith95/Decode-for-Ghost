@@ -12,13 +12,13 @@ Copyright (c) 2013-2015 Scott Smith - Released under The MIT License.
 ### Compiling the CSS
 
 1. Change into the root directory of the theme
-    Ex. `cd $GhostDir/content/themes/Decoded-for-Ghost/
+    Ex. `cd $GhostDir/content/themes/Decoded-for-Ghost/`
 
 2. Install dependencies for npm
-    Ex. npm install
+    Ex. `npm install`
 
 3. Run Gulp
-    Ex. gulp
+    Ex. `gulp`
 
 4. Restart Ghost
     Ex. `cd $GhostDir && npm start --production`
