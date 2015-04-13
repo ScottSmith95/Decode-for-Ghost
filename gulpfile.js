@@ -1,9 +1,7 @@
 var gulp       = require('gulp'),
 	csscomb    = require('gulp-csscomb'),
 	sass       = require('gulp-sass'),
-	prefix     = require('gulp-autoprefixer'),
-	addsrc     = require('gulp-add-src'),
-	minify     = require('gulp-minify-css'),
+	postcss      = require('gulp-postcss'),
 	bower      = require('gulp-bower');
 	concat     = require('gulp-concat'),
 	uglify     = require('gulp-uglify'),
@@ -19,14 +17,17 @@ gulp.task('bower', function() {
 });
 
 gulp.task('styles', function() {
+	var processors = [
+		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
+		require('css-mqpacker'),
+		require('postcss-import')({path: ['node_modules']}), // Look in the node_modules folder for @imports (Normalize.css).
+		require('csswring')
+    ];
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
 			.pipe(csscomb())
 			.pipe(sass())
-			.pipe(prefix('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR', 'Opera 12.1'))
-			.pipe(addsrc.prepend('node_modules/normalize.css/normalize.css')) // Pull in Normalize and inject it into the pipline before concatenation
-			.pipe(concat('style.css'))
-			.pipe(minify({cache: true}))
+			.pipe(postcss(processors))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('assets/styles/build/'));
 });
