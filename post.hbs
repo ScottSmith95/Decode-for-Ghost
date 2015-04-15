@@ -9,13 +9,12 @@
 	{{navigation}}
 </header>
 
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
 <main class="site-content" role="main">
 
 	<article class="{{post_class}}">
-
-		{{! Everything inside the #post tags pulls data from the post }}
-		{{#post}}
-
+			
 			{{! Add Open Graph tags to head}}
 			{{#contentFor "meta"}}
 				<meta property="og:description" content="{{excerpt characters="220"}}...">
@@ -54,7 +53,20 @@
 					<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
 				{{/if}}
 			</footer>
-		{{/post}}
 	</article>
+	
+	<aside class="post-navigation cf">
+		{{#next_post}}
+			<div class="nav-next">
+				<a href="{{url}}">{{title}}</a>
+			</div>
+		{{/next_post}}
+		{{#prev_post}}
+			<div class="nav-previous">
+				<a href="{{url}}">{{title}}</a>
+			</div>
+		{{/prev_post}}
+	</aside>
 
 </main>
+{{/post}}

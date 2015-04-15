@@ -507,6 +507,54 @@
 	}
 }
 
+.post-navigation {
+	width: 92.5%;
+	margin: 2.5% auto;
+	
+	a {
+		transition: padding 0.25s ease-out, color 0.25s ease-out;
+		display: block;
+		overflow: hidden;
+		padding: 0;
+		margin: 2.5% 0;
+		
+		&:hover {
+			padding: 0 2.5%;
+		}
+	}
+}
+
+.nav-next,
+.nav-previous {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.nav-previous {
+	float: left;
+	text-align: left;
+	width: 50%;
+
+	a::before {
+		content: '\2190';
+		/* Left arrow */
+		padding-right: 0.5%;
+	}
+}
+
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+
+	a::after {
+		content: '\2192';
+		/* Right arrow */
+		padding-left: 0.5%;
+	}
+}
+
+
 /* ==========================================================================
    7. Pagination
    ========================================================================== */
@@ -707,7 +755,8 @@
 }
 
 .post-footer,
-.tag-archive-header {
+.tag-archive-header,
+.post-navigation {
 	width: 85%;
 }
 
