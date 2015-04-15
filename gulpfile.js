@@ -12,10 +12,6 @@ var paths = {
 	scripts: ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 
-gulp.task('bower', function() {
-	return bower()
-});
-
 gulp.task('styles', function() {
 	var processors = [
 		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
@@ -33,6 +29,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
+	bower();
 	return gulp.src(paths.scripts)
 		.pipe(sourcemaps.init())
 			.pipe(concat('main.js'))
@@ -48,7 +45,7 @@ gulp.task('watch', function() {
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-gulp.task('default', ['bower', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'watch']);
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-gulp.task('build', ['bower', 'styles', 'scripts']);
+gulp.task('build', ['styles', 'scripts']);
