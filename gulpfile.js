@@ -1,15 +1,15 @@
 var gulp       = require('gulp'),
 	csscomb    = require('gulp-csscomb'),
 	sass       = require('gulp-sass'),
-	postcss      = require('gulp-postcss'),
+	postcss    = require('gulp-postcss'),
 	bower      = require('gulp-bower');
 	concat     = require('gulp-concat'),
 	uglify     = require('gulp-uglify'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:     ['assets/styles/*.scss'],
-	scripts:    ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
+	styles:  ['assets/styles/*.scss'],
+	scripts: ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 
 gulp.task('bower', function() {
