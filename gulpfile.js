@@ -12,6 +12,10 @@ var paths = {
 	scripts: ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 
+gulp.task('bower', function() {
+	return bower();
+});
+
 gulp.task('styles', function() {
 	var processors = [
 		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
@@ -28,8 +32,7 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('assets/styles/build/'));
 });
 
-gulp.task('scripts', function() {
-	bower();
+gulp.task('scripts', ['bower'], function() {
 	return gulp.src(paths.scripts)
 		.pipe(sourcemaps.init())
 			.pipe(concat('main.js'))
