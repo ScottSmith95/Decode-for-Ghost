@@ -21,7 +21,7 @@ Copyright (c) 2013-2015 Scott Smith - Released under The MIT License.
 
 3. Run Gulp
     
-    `gulp`
+    `gulp build`
 
 4. Restart Ghost
     
