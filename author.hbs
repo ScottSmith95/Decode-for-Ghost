@@ -15,14 +15,14 @@
 	{{#author}}
 		<section class="author-card cf">
 			<div class="author-meta">
-				 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</span>{{/if}}
+				 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</a>{{/if}}
 				 {{#if website}}<a href="{{website}}" class="author-website" rel="author">Website</a>{{/if}}
 				 {{#if location}}<div class="author-location">{{location}}</div>{{/if}}
 				 {{#if bio}}<p class="author-bio">{{{bio}}}</p>{{/if}}
 			</div>
 		</section>
 	{{/author}}
-	
+
 	{{navigation}}
 </header>
 
@@ -38,14 +38,14 @@
 			<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
 			<a class="post-meta" href="{{url}}">Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
 		</header>
-		
+
 		<section class="post-excerpt">
 			<p>{{excerpt}}<a href="{{url}}" class="excerpt-suffix">&hellip;</a></p>
 		</section>
-		
+
 		<footer class="post-footer">
 			<div class="post-tags">{{tags separator=", " prefix="Tagged with: "}}</div>
-		</footer> 
+		</footer>
 	</article>
 
 	{{/foreach}}

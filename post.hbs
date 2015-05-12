@@ -5,7 +5,7 @@
 	{{#if @blog.logo}}<a href="{{@blog.url}}"><img class="blog-logo" src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
 	{{#if @blog.title}}<h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>{{/if}}
 	{{#if @blog.description}}<h2 class="blog-description">{{@blog.description}}</h2>{{/if}}
-	
+
 	{{navigation}}
 </header>
 
@@ -14,7 +14,7 @@
 <main class="site-content" role="main">
 
 	<article class="{{post_class}}">
-			
+
 			{{! Add Open Graph tags to head}}
 			{{#contentFor "meta"}}
 				<meta property="og:description" content="{{excerpt characters="220"}}...">
@@ -36,12 +36,12 @@
 				{{#author}}
 					<section class="author-card cf">
 						{{#if image}}
-							<figure class="author-image">					
+							<figure class="author-image">
 								<a href="{{url}}"><img src="{{image}}" alt="{{name}}'s Image"></a>
 							</figure>
 						{{/if}}
 						<div class="author-meta" {{#if author.image}}style="width: 65%; float: left;"{{/if}}>
-							 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</span>{{/if}}
+							 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</a>{{/if}}
 							 {{#if website}}<a href="{{website}}" class="author-website" rel="author">Website</a>{{/if}}
 							 {{#if location}}<div class="author-location">{{location}}</div>{{/if}}
 							 {{#if bio}}<p class="author-bio">{{{bio}}}</p>{{/if}}
@@ -54,7 +54,7 @@
 				{{/if}}
 			</footer>
 	</article>
-	
+
 	<aside class="post-navigation cf">
 		{{#next_post}}
 			<div class="nav-next">
