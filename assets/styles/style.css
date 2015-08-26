@@ -20,27 +20,27 @@
    ========================================================================== */
 
 @import 'normalize.css/normalize.css';
-@import 'settings'; /* Import custom-defined styles */
+@import '_settings.css'; /* Import custom-defined styles */
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
 
-@import 'partials/1 Icons';
+@import 'partials/1 Icons.css';
 
 
 /* ==========================================================================
    2. Base Styles - Setting up some base styles
    ========================================================================== */
 
-@import 'partials/2 Base Styles';
+@import 'partials/2 Base Styles.css';
 
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
 
-@import 'partials/3 Utilities';
+@import 'partials/3 Utilities.css';
 
 /* ==========================================================================
    4. General

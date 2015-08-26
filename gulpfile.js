@@ -1,6 +1,4 @@
 var gulp       = require('gulp'),
-	csscomb    = require('gulp-csscomb'),
-	sass       = require('gulp-sass'),
 	postcss    = require('gulp-postcss'),
 	bower      = require('gulp-bower');
 	concat     = require('gulp-concat'),
@@ -18,15 +16,16 @@ gulp.task('bower', function() {
 
 gulp.task('styles', function() {
 	var processors = [
+		require('postcss-import'),
 		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
-		require('css-mqpacker'),
-		require('postcss-import')({path: ['node_modules']}), // Look in the node_modules folder for @imports (Normalize.css).
+		require('postcss-nested'),
+	    require('postcss-simple-vars'),
+	    require('postcss-pseudoelements'),
+		require('css-mqpacker')({sort: true}),
 		require('csswring')
     ];
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
-			.pipe(csscomb())
-			.pipe(sass())
 			.pipe(postcss(processors))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('assets/styles/build/'));
