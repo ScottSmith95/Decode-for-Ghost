@@ -1,0 +1,12 @@
+:root {
+	/* Colors */
+	--background-color: #ECEEF0;
+	--text-color: #444444;
+	--secondary-text-color: #82969C;
+	--accent-color: #009BCD;
+	--secondary-accent-color: #007EA6;
+	--highlight-color: RGBA(147, 187, 201, 0.5);
+	
+	/* Fonts */
+	--font-family: "Oxygen", "Helvetica Neue", "Arial", sans-serif;
+}

@@ -19,7 +19,7 @@ gulp.task('styles', function() {
 		require('postcss-import'),
 		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
 		require('postcss-nested'),
-	    require('postcss-simple-vars'),
+	    require('postcss-custom-properties'),
 	    require('postcss-pseudoelements'),
 		require('css-mqpacker')({sort: true}),
 		require('csswring')
