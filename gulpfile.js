@@ -6,7 +6,7 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:  ['assets/styles/*.scss'],
+	styles:  ['assets/styles/*.css', '!assets/styles/variables.css'],
 	scripts: ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
 };
 

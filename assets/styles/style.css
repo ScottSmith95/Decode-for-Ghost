@@ -20,7 +20,7 @@
    ========================================================================== */
 
 @import 'normalize.css/normalize.css';
-@import '_variables.css'; /* Import custom-defined styles */
+@import 'variables.css'; /* Import custom-defined styles */
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
