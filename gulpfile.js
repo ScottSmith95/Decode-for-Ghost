@@ -22,7 +22,7 @@ gulp.task('styles', function() {
 	    require('postcss-custom-properties'),
 	    require('postcss-pseudoelements'),
 		require('css-mqpacker')({sort: true}),
-		require('cssnano')({autoprefixer: false, discardEmpty: false})
+		require('cssnano')({autoprefixer: false})
     ];
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
