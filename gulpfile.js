@@ -17,12 +17,12 @@ gulp.task('bower', function() {
 gulp.task('styles', function() {
 	var processors = [
 		require('postcss-import'),
-		require('autoprefixer-core')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
+		require('autoprefixer')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
 		require('postcss-nested'),
 	    require('postcss-custom-properties'),
 	    require('postcss-pseudoelements'),
 		require('css-mqpacker')({sort: true}),
-		require('csswring')
+		require('cssnano')({autoprefixer: false, discardEmpty: false})
     ];
 	return gulp.src(paths.styles)
 		.pipe(sourcemaps.init())
