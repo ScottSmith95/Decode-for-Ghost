@@ -1,18 +1,10 @@
 var gulp       = require('gulp'),
 	postcss    = require('gulp-postcss'),
-	bower      = require('gulp-bower');
-	concat     = require('gulp-concat'),
-	uglify     = require('gulp-uglify'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:  ['assets/styles/*.css', '!assets/styles/variables.css'],
-	scripts: ['assets/scripts/main.js', 'bower_components/FitVids/jquery.fitvids.js'],
+	styles:  ['assets/styles/*.css', '!assets/styles/variables.css']
 };
-
-gulp.task('bower', function() {
-	return bower();
-});
 
 gulp.task('styles', function() {
 	var processors = [
@@ -31,23 +23,13 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('assets/styles/build/'));
 });
 
-gulp.task('scripts', ['bower'], function() {
-	return gulp.src(paths.scripts)
-		.pipe(sourcemaps.init())
-			.pipe(concat('main.js'))
-			.pipe(uglify())
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('assets/scripts/build/'));
-});
-
 gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['styles']);
-	gulp.watch(paths.scripts, ['scripts']);
 });
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-gulp.task('default', ['styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'watch']);
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-gulp.task('build', ['styles', 'scripts']);
+gulp.task('build', ['styles']);
