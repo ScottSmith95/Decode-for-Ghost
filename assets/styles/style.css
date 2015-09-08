@@ -407,7 +407,8 @@
 		img {
 			transition: box-shadow 0.35s ease-out;
 			display: block;
-			max-width: 100%;
+			width: 100%;
+			max-width: 125px;
 			margin: 0;
 			border-radius: 50%;
 			box-shadow: 0 0 5px rgba(0,0,0,0);
@@ -762,10 +763,6 @@
 
 .author-card {
 	margin-bottom: 5%;
-}
-
-.author-card .author-image img {
-	max-width: 125px;
 }
 
 .pagination {
