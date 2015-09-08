@@ -1,5 +1,5 @@
 # Decode for Ghost
-#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.7.2/decode.zip)
+#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.7.3/decode.zip)
 
 #### [Demo](http://decode-ghost-demo.scotthsmith.com)
 
