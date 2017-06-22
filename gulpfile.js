@@ -9,7 +9,7 @@ var paths = {
 gulp.task('styles', function() {
 	var processors = [
 		require('postcss-import'),
-		require('autoprefixer')('last 2 versions', '> 1%', 'ie 9', 'ie 8', 'Firefox ESR'),
+		require('autoprefixer'),
 		require('postcss-nested'),
 	    require('postcss-custom-properties'),
 	    require('postcss-pseudoelements'),
