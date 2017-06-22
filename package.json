@@ -14,10 +14,10 @@
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.0",
     "gulp-sourcemaps": "^2.6.0",
-    "normalize.css": "^7.0.0",
     "postcss-custom-properties": "^6.0.1",
     "postcss-import": "^10.0.0",
     "postcss-nested": "^2.0.2",
+    "postcss-normalize": "^4.0.0",
     "postcss-pseudoelements": "^4.0.0"
   },
   "browserslist": [
