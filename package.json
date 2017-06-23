@@ -11,7 +11,7 @@
     "autoprefixer": "^7.1.1",
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.7.1",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sourcemaps": "^2.6.0",
     "postcss-custom-properties": "^6.0.1",

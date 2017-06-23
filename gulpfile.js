@@ -3,10 +3,13 @@ var gulp       = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-	styles:  ['assets/styles/*.css', '!assets/styles/variables.css']
+	styles:  {
+		src: ['assets/styles/*.css', '!assets/styles/variables.css'],
+		dest: 'assets/styles/build/'
+	}
 };
 
-gulp.task('styles', function() {
+function styles() {
 	var processors = [
 		require('postcss-import'),
 		require('autoprefixer'),
@@ -17,20 +20,29 @@ gulp.task('styles', function() {
 		require('postcss-normalize'),
 		require('cssnano')({autoprefixer: false})
     ];
-	return gulp.src(paths.styles)
+	return gulp.src(paths.styles.src)
 		.pipe(sourcemaps.init())
 			.pipe(postcss(processors))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('assets/styles/build/'));
-});
+		.pipe(gulp.dest(paths.styles.dest));
+}
 
-gulp.task('watch', function() {
-	gulp.watch(paths.styles, ['styles']);
-});
+function watch() {
+	gulp.watch(paths.styles.src, styles);
+}
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-gulp.task('default', ['styles', 'watch']);
+var defaultTask = gulp.parallel(styles, watch);
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-gulp.task('build', ['styles']);
+var buildTask = gulp.parallel(styles);
+
+// Exports
+// Externalise individual tasks.
+exports.styles = styles;
+exports.watch = watch;
+
+// Externalise Workflows.
+exports.build = buildTask;
+exports.default = defaultTask;
