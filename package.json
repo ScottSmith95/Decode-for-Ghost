@@ -1,6 +1,6 @@
 {
   "name": "decode",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "author": {
     "name": "Scott Smith",
     "email": "mail@ScottHSmith.com",
@@ -13,8 +13,8 @@
   "gpm": {
     "type": "theme",
     "categories": [
-        "Minimal",
-        "Personal Blogs"
+      "Minimal",
+      "Personal Blogs"
     ]
   },
   "demo": "https://decode-ghost-demo.scotthsmith.com/",
@@ -27,17 +27,17 @@
     "build": "gulp build"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.7.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sourcemaps": "^2.6.0",
-    "postcss-custom-properties": "^6.0.1",
+    "postcss-custom-properties": "^6.1.0",
     "postcss-import": "^10.0.0",
-    "postcss-nested": "^2.0.2",
+    "postcss-nested": "^2.1.0",
     "postcss-normalize": "^4.0.0",
-    "postcss-pseudoelements": "^4.0.0"
+    "postcss-pseudoelements": "^5.0.0"
   },
   "browserslist": [
     "last 2 versions",
@@ -45,6 +45,6 @@
     "Firefox ESR"
   ],
   "config": {
-    "posts_per_page": 5
+    "posts_per_page": 10
   }
 }
