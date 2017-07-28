@@ -1,11 +1,11 @@
 {{!< default}}
 
-{{#if @blog.cover}}
+{{#if @blog.blog.cover_image}}
 	<div class="page-scroll">
 {{/if}}
-	{{#if author.image}}
+	{{#if author.profile_image}}
 		<a href="{{@blog.url}}">
-			<img class="header-logo author-image" src="{{author.image}}" alt="{{author.name}}'s Image">
+			<img class="header-logo author-image" src="{{author.profile_image}}" alt="{{author.name}}'s Image">
 		</a>
 	{{/if}}
 
@@ -34,7 +34,7 @@
 
 	<article class="{{post_class}}">
 		<header class="post-header">
-			{{#if image}}<a href="{{url}}"><img class="post-image" src="{{image}}"></a>{{/if}}
+			{{#if feature_image}}<a href="{{url}}"><img class="post-image" src="{{feature_image}}"></a>{{/if}}
 			<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
 			<a class="post-meta" href="{{url}}">Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
 		</header>

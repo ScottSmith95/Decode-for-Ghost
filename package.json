@@ -1,11 +1,30 @@
 {
-  "name": "Decode",
+  "name": "decode",
   "version": "0.7.3",
-  "author": "Scott Smith <mail@ScottHSmith.com> (http://ScottHSmith.com)",
+  "author": {
+    "name": "Scott Smith",
+    "email": "mail@ScottHSmith.com",
+    "url": "https://ScottHSmith.com"
+  },
   "license": "MIT",
+  "engines": {
+    "ghost": "^1.0.0"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+        "Minimal",
+        "Personal Blogs"
+    ]
+  },
+  "demo": "https://decode-ghost-demo.scotthsmith.com/",
+  "homepage": "https://ScottHSmith.com/projects/decode-archive",
   "repository": {
     "type": "git",
     "url": "https://github.com/ScottSmith95/Decode-for-Ghost.git"
+  },
+  "scripts": {
+    "build": "gulp build"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -24,5 +43,8 @@
     "last 2 versions",
     "> 2.5%",
     "Firefox ESR"
-  ]
+  ],
+  "config": {
+    "posts_per_page": 5
+  }
 }

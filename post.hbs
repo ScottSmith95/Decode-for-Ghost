@@ -23,7 +23,7 @@
 			{{! Everything below outputs content of the the post which has been published }}
 
 			<header class="post-header">
-				{{#if image}}<a href="{{url}}"><img class="post-image" src="{{image}}"></a>{{/if}}
+				{{#if post.feature_image}}<a href="{{url}}"><img class="post-image" src="{{post.feature_image}}"></a>{{/if}}
 				<h1 class="post-title">{{title}}</h1>
 				<span class="post-meta">Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time></span>
 			</header>
@@ -35,12 +35,12 @@
 			<footer class="post-footer">
 				{{#author}}
 					<section class="author-card cf">
-						{{#if image}}
+						{{#if profile_image}}
 							<figure class="author-image">
-								<a href="{{url}}"><img src="{{image}}" alt="{{name}}'s Image"></a>
+								<a href="{{url}}"><img src="{{profile_image}}" alt="{{name}}'s Image"></a>
 							</figure>
 						{{/if}}
-						<div class="author-meta" {{#if author.image}}style="width: 65%; float: left;"{{/if}}>
+						<div class="author-meta" {{#if profile_image}}style="width: 65%; float: left;"{{/if}}>
 							 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</a>{{/if}}
 							 {{#if website}}<a href="{{website}}" class="author-website" rel="author">Website</a>{{/if}}
 							 {{#if location}}<div class="author-location">{{location}}</div>{{/if}}
