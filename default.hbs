@@ -4,12 +4,11 @@
 	{{! Document Settings }}
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 	{{! Page Meta }}
 	<title>{{meta_title}}</title>
 	<meta name="HandheldFriendly" content="True">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
@@ -29,8 +28,8 @@
 		{{#if @blog.cover_image}} blog-has-cover{{/if}}
 		{{#if @blog.logo}} blog-has-logo{{/if}}
 		{{#if author.cover_image}} author-has-cover{{/if}}
-		{{#if author.profile_image}} author-has-image{{/if}}"
-	{{/is}} 
+		{{#if author.profile_image}} author-has-image{{/if}}
+	{{/is}}" 
 	{{#is "home, index, tag"}}
 		{{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}});"{{/if}}
 	{{/is}}
