@@ -25,7 +25,7 @@
 			<header class="post-header">
 				{{#if post.feature_image}}<a href="{{url}}"><img class="post-image" src="{{post.feature_image}}"></a>{{/if}}
 				<h1 class="post-title">{{title}}</h1>
-				<span class="post-meta">Posted on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time></span>
+				<span class="post-meta">{{t "Posted on"}} <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMMM YYYY'}}</time></span>
 			</header>
 
 			<section class="post-content">
@@ -42,7 +42,7 @@
 						{{/if}}
 						<div class="author-meta" {{#if profile_image}}style="width: 65%; float: left;"{{/if}}>
 							 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</a>{{/if}}
-							 {{#if website}}<a href="{{website}}" class="author-website" rel="author">Website</a>{{/if}}
+							 {{#if website}}<a href="{{website}}" class="author-website" rel="author">{{t "Website"}}</a>{{/if}}
 							 {{#if location}}<div class="author-location">{{location}}</div>{{/if}}
 							 {{#if bio}}<p class="author-bio">{{{bio}}}</p>{{/if}}
 						</div>
@@ -50,7 +50,7 @@
 				{{/author}}
 
 				{{#if tags}}
-					<div class="post-tags">Tagged with: {{tags separator=", "}}</div>
+					<div class="post-tags">{{t "Tagged with"}}: {{tags separator=", "}}</div>
 				{{/if}}
 			</footer>
 	</article>
