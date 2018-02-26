@@ -5,7 +5,7 @@
 	<header class="post-header">
 		{{#if feature_image}}<a href="{{url}}"><img class="post-image" src="{{feature_image}}"></a>{{/if}}
 		<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-		<a class="post-meta" href="{{url}}">Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
+		<a class="post-meta" href="{{url}}">{{t "Posted on"}} <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></a>
 	</header>
 	
 	<section class="post-excerpt">
@@ -13,7 +13,7 @@
 	</section>
 	
 	<footer class="post-footer">
-		<div class="post-tags">{{tags separator=", " prefix="Tagged with: "}}</div>
+		<div class="post-tags">{{t "Tagged with"}}: {{tags separator=", "}}</div>
 	</footer> 
 </article>
 
