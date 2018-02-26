@@ -45,6 +45,11 @@
    4. General
    ========================================================================== */
 
+.site-main {
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
 .blog-logo,
 .header-logo {
 	transition: opacity 0.5s ease-out;
@@ -82,7 +87,7 @@
 			z-index: 2;
 			transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
 			margin-top: 15em;
-			box-shadow: 0px 0px 2em rgba(0,0,0,0.5);
+			box-shadow: 0 -1em 1em rgba(0, 0, 0, 0.35);
 		}
 		
 		.site-header {
@@ -118,8 +123,11 @@
 	}
 }
 .fancy-header.blog-has-cover.blog-has-logo {
+	.blog-logo, .header-logo {
+		top: 3em;
+	}
+	
 	.site-main {
-		top: -3em;
 		padding-top: 3em;
 	}
 }
@@ -728,8 +736,11 @@
 
 .fancy-header.blog-has-cover.blog-has-logo,
 .fancy-header.blog-has-cover.author-has-image {
+	.blog-logo, .header-logo {
+		top: 4.25em;
+	}
+	
 	.site-main {
-		top: -4.25em;
 		padding-top: 4.25em;
 	}
 }
