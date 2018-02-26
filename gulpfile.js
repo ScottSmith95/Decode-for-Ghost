@@ -1,8 +1,10 @@
-var gulp       = require('gulp'),
-	postcss    = require('gulp-postcss'),
-	sourcemaps = require('gulp-sourcemaps');
+'use strict';
 
-var paths = {
+const gulp       = require('gulp');
+const postcss    = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+
+const paths = {
 	styles:  {
 		src: ['assets/styles/*.css', '!assets/styles/variables.css'],
 		dest: 'assets/styles/build/'
@@ -33,10 +35,10 @@ function watch() {
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-var defaultTask = gulp.parallel(styles, watch);
+const defaultTask = gulp.parallel(styles, watch);
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-var buildTask = gulp.parallel(styles);
+const buildTask = gulp.parallel(styles);
 
 // Exports
 // Externalise individual tasks.
