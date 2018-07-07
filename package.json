@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "engines": {
-    "ghost": "^1.0.0"
+    "ghost": ">=1.23.0"
   },
   "gpm": {
     "type": "theme",
