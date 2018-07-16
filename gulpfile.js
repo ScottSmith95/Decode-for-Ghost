@@ -14,12 +14,11 @@ const paths = {
 function styles() {
 	var processors = [
 		require('postcss-import'),
-		require('autoprefixer'),
 		require('postcss-nested'),
 	    require('postcss-custom-properties'),
-	    require('postcss-pseudoelements'),
+	    require('postcss-normalize')({forceImport: true}),
 		require('css-mqpacker')({sort: true}),
-		require('postcss-normalize'),
+		require('autoprefixer'),
 		require('cssnano')({autoprefixer: false})
     ];
 	return gulp.src(paths.styles.src)
