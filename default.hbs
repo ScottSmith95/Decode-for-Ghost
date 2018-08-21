@@ -27,14 +27,14 @@
 	{{#is "home, index, tag, author"}} fancy-header
 		{{#if @blog.cover_image}} blog-has-cover{{/if}}
 		{{#if @blog.logo}} blog-has-logo{{/if}}
-		{{#if author.cover_image}} author-has-cover{{/if}}
-		{{#if author.profile_image}} author-has-image{{/if}}
+		{{#if primary_author.cover_image}} author-has-cover{{/if}}
+		{{#if primary_author.profile_image}} author-has-image{{/if}}
 	{{/is}}" 
 	{{#is "home, index, tag"}}
 		{{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}});"{{/if}}
 	{{/is}}
 	{{#is "author"}}
-		{{#if @blog.cover_image}}{{#if author.cover_image}}style="background-image: url({{author.cover_image}});"{{else}}style="background-image: url({{@blog.cover_image}});"{{/if}}{{/if}}
+		{{#if @blog.cover_image}}{{#if primary_author.cover_image}}style="background-image: url({{primary_author.cover_image}});"{{else}}style="background-image: url({{@blog.cover_image}});"{{/if}}{{/if}}
 	{{/is}}>
 	
 	{{! Everything else gets inserted here }}

@@ -33,7 +33,7 @@
 			</section>
 
 			<footer class="post-footer">
-				{{#author}}
+				{{#primary_author}}
 					<section class="author-card cf">
 						{{#if profile_image}}
 							<figure class="author-image">
@@ -47,7 +47,7 @@
 							 {{#if bio}}<p class="author-bio">{{{bio}}}</p>{{/if}}
 						</div>
 					</section>
-				{{/author}}
+				{{/primary_author}}
 
 				{{#if tags}}
 					<div class="post-tags">{{t "Tagged with"}}: {{tags separator=", "}}</div>
