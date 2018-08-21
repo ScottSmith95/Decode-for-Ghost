@@ -1,43 +1,48 @@
 'use strict';
 
-const gulp       = require('gulp');
-const postcss    = require('gulp-postcss');
-const sourcemaps = require('gulp-sourcemaps');
+const gulp       = require( 'gulp' );
+const postcss    = require( 'gulp-postcss' );
+const sourcemaps = require( 'gulp-sourcemaps' );
 
 const paths = {
-	styles:  {
-		src: ['assets/styles/*.css', '!assets/styles/variables.css'],
+	styles: {
+		src: [ 'assets/styles/*.css', '!assets/styles/variables.css' ],
 		dest: 'assets/styles/build/'
 	}
 };
 
 function styles() {
-	var processors = [
-		require('postcss-import'),
-		require('postcss-nested'),
-	    require('postcss-custom-properties'),
-	    require('postcss-normalize')({forceImport: true}),
-		require('css-mqpacker')({sort: true}),
-		require('autoprefixer'),
-		require('cssnano')({autoprefixer: false})
+	const processors = [
+		require( 'postcss-import' ),
+		require( 'postcss-nested' ),
+	    require( 'postcss-custom-properties' )( { warnings: true } ),
+	    require( 'postcss-normalize' )( { forceImport: true } ),
+		require( 'css-mqpacker' )( { sort: true } ),
+		require( 'autoprefixer' ),
+		require( 'cssnano' )( {
+			preset: [ 'default', {
+				calc: false,
+				mergeLonghand: false // These conflict with processing nested calc() and env values().
+			} ]
+		} )
     ];
-	return gulp.src(paths.styles.src)
-		.pipe(sourcemaps.init())
-			.pipe(postcss(processors))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.styles.dest));
+	return gulp.src( paths.styles.src )
+		.pipe( sourcemaps.init() )
+			.pipe( postcss( processors ) )
+		.pipe( sourcemaps.write( './' ) )
+		.pipe( gulp.dest( paths.styles.dest ) );
 }
 
 function watch() {
-	gulp.watch(paths.styles.src, styles);
+	gulp.watch( paths.styles.src, styles );
 }
 
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-const defaultTask = gulp.parallel(styles, watch);
+const defaultTask = gulp.parallel( styles, watch );
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
-const buildTask = gulp.parallel(styles);
+const buildTask = gulp.parallel( styles );
 
 // Exports
 // Externalise individual tasks.
