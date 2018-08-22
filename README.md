@@ -25,6 +25,7 @@ Copyright (c) 2013-2018 Scott Smith - Released under The MIT License.
 
 4. Restart Ghost
     (Only needed if ghost is running in production.)
+    
     `ghost restart`
 
 5. Profit.
