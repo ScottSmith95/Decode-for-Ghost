@@ -162,7 +162,6 @@
 .post-content {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
 .post-content p {
@@ -245,6 +244,7 @@ figure.kg-image-card {
 	}
 	
 	&.kg-width-full {
+		align-self: center;
 		max-width: none;
 
 		img.kg-image {
