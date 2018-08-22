@@ -288,6 +288,12 @@
 }
 
 /* Post Styles */
+.post-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .post-content p {
 	hyphens: auto;
 }
@@ -333,6 +339,56 @@
 	line-height: 0;
 	vertical-align: -0.4em;
 	margin-right: 0.25em;
+}
+
+figure.kg-embed-card {
+	margin: 0.5rem auto;
+	
+	iframe {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+figure.kg-image-card {
+	margin: 0.25rem 0;
+	text-align: left;
+
+	img {
+		display: block;
+	}
+	
+	&.kg-width-wide {
+		max-width: none;
+
+		img.kg-image {
+			/* 
+			 * max-width: 107.5%;
+			 * margin-left: -3.75%; 
+			 * Rounding up from these values ensures that 
+			 * the image fully spans content div on narrow viewports.
+			*/
+			margin-left: -4.1%;
+			max-width: 108.2%;
+		}
+	}
+	
+	&.kg-width-full {
+		max-width: none;
+
+		img.kg-image {
+			max-width: 100vw;
+		}
+	}
+	
+	figcaption {
+		color: var(--secondary-text-color);
+		text-align: center;
+		font-size: 0.85em;
+		font-style: italic;
+		padding: 0 0 0.5rem;
+		margin: 0 auto;
+	}
 }
 
 .post-meta {
