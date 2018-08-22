@@ -248,6 +248,7 @@ figure.kg-image-card {
 		max-width: none;
 
 		img.kg-image {
+			width: 100vw;
 			max-width: 100vw;
 		}
 	}
