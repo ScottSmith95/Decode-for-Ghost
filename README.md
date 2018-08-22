@@ -1,5 +1,5 @@
 # Decode for Ghost
-#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.9.0/decode.zip)
+#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.9.1/decode.zip)
 
 #### [Demo](https://decode-ghost-demo.scotthsmith.com)
 
@@ -9,23 +9,23 @@ Please open an issue here on GitHub if you have any suggestions or problems with
 
 Copyright (c) 2013-2018 Scott Smith - Released under The MIT License.
 
-### Compiling the CSS
+### Compiling CSS (For Development)
 
 1. Change into the root directory of the theme
 
-    `cd $GhostDir/content/themes/Decoded-for-Ghost/`
+    `cd /path/to/ghost/content/themes/decode/`
 
 2. Install dependencies for npm
 
-    `npm install`
+    `npm ci || npm install`
 
 3. Run Gulp
 
     `gulp build`
 
 4. Restart Ghost
-
-    `cd $GhostDir && npm start --production`
+    (Only needed if ghost is running in production.)
+    `ghost restart`
 
 5. Profit.
 
