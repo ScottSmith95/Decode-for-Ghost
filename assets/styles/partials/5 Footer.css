@@ -1,0 +1,118 @@
+/* ==========================================================================
+   5. Footer - The bottom of every page
+   ========================================================================== */
+
+.site-footer {
+	position: relative;
+	margin: 5% auto 0;
+	margin: calc(2.5% + 25px) auto 0;
+	padding: 4rem 0 1%;
+	border-top: 1px solid var(--accent-color);
+	line-height: 1.7em;
+	text-align: center;
+	width: 85%;
+
+	@media only screen and (min-width: 35em) {
+		width: 75%;
+	}
+
+	@media only screen and (min-width: 50em) {
+		width: 72.5%;
+	}
+
+	@media only screen and (min-width: 68.5em) {
+		width: 52.5%;
+		max-width: 55rem;
+	}
+}
+
+.site-footer a {
+	color: var(--secondary-text-color);
+}
+
+	.site-footer a:hover {
+		 color: var(--accent-color);
+	}
+
+.poweredby .icon-ghost {
+	font-weight: 700;
+}
+
+.poweredby .icon-ghost::before {
+	font-size: 1rem;
+	margin-right: 0.2em;
+}
+
+/* The subscribe icon on the footer */
+.subscribe {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: -25px;
+	left: 50%;
+	margin-left: -25px;
+	text-align: center;
+	line-height: 2.4rem;
+	border-radius: 50%;
+	background-color: var(--accent-color);
+	transition: background-color 0.3s ease;
+
+	/* The RSS icon, inserted via icon font */
+	&::before {
+		color: #FFF;
+		font-size: 26px;
+		position: absolute;
+		top: 5px;
+		left: 12px;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background-color: var(--secondary-accent-color);
+	}
+	
+	&:active {
+		background-color: var(--secondary-text-color);
+	}
+}
+
+/* CSS tooltip saying "RSS" - initially hidden */
+.tooltip {
+	opacity:0;
+	display: inline-block;
+	padding: 4px 8px 5px 8px;
+	position: absolute;
+	top: -23px;
+	left: -1px;
+	color: rgba(255,255,255,0.9);
+	font-family: var(--font-family);
+	font-size: 1.1rem;
+	font-weight: bold;
+	line-height: 1em;
+	text-align: center;
+	background: #50585D;
+	border-radius: 20px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+	transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+/* The little chiclet arrow under the tooltip, pointing down */
+.tooltip:after {
+	content: "";
+	border-width: 5px 5px 0 5px;
+	border-style: solid;
+	border-color: #50585D transparent;
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	margin-left:-5px;
+	z-index: 220;
+	width: 0;
+}
+
+/* On hover, show the tooltip! */
+.subscribe:hover .tooltip {
+	opacity: 1;
+	top: -33px;
+}

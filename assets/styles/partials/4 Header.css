@@ -1,0 +1,203 @@
+/* ==========================================================================
+   4. Header - The top of every page
+   ========================================================================== */
+.blog-logo,
+.header-logo {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+	position: relative;
+	z-index: 3;
+	height: 6em;
+	width: auto;
+	max-width: 100%;
+	margin: 2.5% auto 0;
+	display: block;
+	user-drag: none;
+}
+
+	.blog-logo a img:hover {
+		opacity: 0.75;
+	}
+	
+	.blog-logo a img:active {
+		opacity: 0.85;
+	}
+
+
+/*************************
+	Fancy page headers
+*************************/
+.fancy-header {
+	&.blog-has-cover {
+		.header-logo {
+			filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
+			backface-visibility: hidden; /* A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/ */
+		}
+
+		.site-main {
+			position: relative; /* Create stacking context and set height above cover photo */
+			z-index: 2;
+			transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
+			margin-top: 15em;
+			box-shadow: 0 -1em 1em rgba(0, 0, 0, 0.35);
+		}
+		
+		.site-header {
+			margin-top: 0;
+		}
+	}
+	
+	&.blog-has-logo {
+		.site-header {
+			margin-top: 0;
+		}
+	}
+	
+	&.blog-has-cover.blog-has-logo {
+		.blog-logo,
+		.header-logo {
+			margin-top: 0;
+		}
+		
+		.site-main {
+			margin-top: 0;
+		}
+	}
+	
+	.site-main {
+		background: var(--background-color);
+	}
+	
+	.featured.post {
+		box-sizing: border-box;
+		background: #DBDEE1;
+		padding: 2.5%;
+	}
+}
+
+.fancy-header.blog-has-cover.blog-has-logo {
+	.blog-logo, .header-logo {
+		top: 3em;
+	}
+	
+	.site-main {
+		padding-top: 3em;
+	}
+}
+
+.header-logo.author-image {
+	border-radius: 50%;
+}
+
+.page-scroll {
+	margin-top: 5em;
+	position: relative;
+}
+
+.site-header {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 1.5%;
+	border-bottom: 1px solid var(--accent-color);
+	margin: 2.5% auto 3.5%;
+}
+
+	.author-template {
+		.site-header {
+			margin-top: 0; /* Removes spacing above author card. */
+		}
+	}
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+	font-size: 1.75em;
+	font-weight: normal;
+	letter-spacing: -1px;
+	margin: 1.5% auto 0;
+}
+
+.blog-title a {
+	transition: text-shadow 0.3s ease;
+	color: var(--text-color);
+
+	&:hover {
+		color: var(--text-color);
+		text-shadow: 0px 0px 6px rgba(75,75,75,0.5);
+	}
+	
+	&:active {
+		color: var(--text-color);
+		text-shadow: 0px -2px 12px rgba(75,75,75,0.85);
+	}
+}
+
+.blog-description {
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+.tag-archive-header {
+	margin: 0 auto;
+	border-bottom: 1px solid var(--accent-color);
+}
+
+@media only screen and (min-width: 35em) {
+	.page-scroll {
+		margin-top: 50vh;
+	}
+	
+	.fancy-header.blog-has-cover.blog-has-logo,
+	.fancy-header.blog-has-cover.author-has-image {
+		.blog-logo, .header-logo {
+			top: 4.25em;
+		}
+		
+		.site-main {
+			padding-top: 4.25em;
+		}
+	}
+	
+	.site-header {
+		width: 82.5%;
+	}
+	
+	.blog-cover {
+		height: 15em;
+	}
+	
+	.blog-logo, .header-logo {
+		height: 8.5em;
+	}
+}
+
+@media only screen and (min-width: 50em) {
+	.site-header {
+		width: 80%;
+	}
+
+	.blog-cover {
+		height: 20em;
+	}
+	
+	.blog-title {
+		font-size: 2.8em;
+	}
+}
+
+@media only screen and (min-width: 68.5em) {
+	.site-header {
+		width: 60%;
+		max-width: 60rem;
+	}
+	
+	.blog-cover {
+		height: 25em;
+	}
+	
+	.blog-title {
+		font-size: 3.5em;
+	}
+}
