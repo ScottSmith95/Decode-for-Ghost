@@ -451,7 +451,7 @@ figure.kg-image-card {
 
 /* Create some space to the right for the share links */
 .author-card {
-	transition: box-shadow 0.35s ease-out;
+	transition: box-shadow 0.3s ease;
 	text-align: left;
 	padding: 3.5%;
 	margin: 0 auto 15%;
@@ -468,7 +468,7 @@ figure.kg-image-card {
 		margin: 0;
 		
 		img {
-			transition: box-shadow 0.35s ease-out;
+			transition: box-shadow 0.3s ease;
 			display: block;
 			width: 100%;
 			max-width: 125px;
@@ -554,17 +554,17 @@ figure.kg-image-card {
 		color: var(--accent-color);
 		
 		&:hover {
-			animation: shake 0.25s ease 0.25s;
+			animation: shake 0.3s ease 0.25s;
 		}
 	}
 }
 
 @keyframes shake {
 	0%, 54%, 90% {
-		transform: translateX(-7px);
+		transform: translateX(-0.6em);
 	}
 	18%, 72% {
-		transform: translateX(7px);
+		transform: translateX(0.6em);
 	}
 	100% {
 		transform: translateX(0);
@@ -576,7 +576,7 @@ figure.kg-image-card {
 	margin: 2.5% auto;
 	
 	a {
-		transition: padding 0.25s ease-out, color 0.25s ease-out;
+		transition: padding 0.3s ease, color 0.3s ease;
 		display: block;
 		overflow: hidden;
 		padding: 0;
