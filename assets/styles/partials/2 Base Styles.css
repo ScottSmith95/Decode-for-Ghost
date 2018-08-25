@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	font: normal 300 110%/1.5 var(--font-family);
+	font: normal 300 100%/1.5 var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
 	background-position: center;
@@ -27,9 +27,9 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-	text-rendering: optimizeLegibility;
 	line-height: 1;
-	margin-top: 0;
+	text-rendering: optimizeLegibility;
+	margin-bottom: 0.375em;
 	
 	a {
 		color: var(--text-color);
@@ -74,14 +74,14 @@ a {
 p,
 ul,
 ol {
-	margin: 1.6em 0;
+	margin: 0.5em 0 1.5em;
 }
 
 ol ol,
 ul ul,
 ul ol,
 ol ul {
-	margin: 0.4em 0;
+	margin: 0.375em 0;
 }
 
 hr {
@@ -121,7 +121,7 @@ blockquote cite a { font-weight: normal; }
 
 
 dl {
-	margin: 1.6em 0;
+	margin: 1.5em 0;
 }
 
 dl dt {
@@ -157,7 +157,7 @@ code, tt {
 
 pre {
 	box-sizing: border-box;
-	margin: 1.6em 0;
+	margin: 1.5em 0;
 	border: 1px solid #E3EDF3;
 	width: 100%;
 	padding: 10px;
@@ -195,7 +195,7 @@ kbd {
 
 table {
 	box-sizing: border-box;
-	margin: 1.6em 0;
+	margin: 1.5em 0;
 	width:100%;
 	max-width: 100%;
 	background-color: transparent;
