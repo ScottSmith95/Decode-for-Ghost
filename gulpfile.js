@@ -7,7 +7,8 @@ const sourcemaps = require( 'gulp-sourcemaps' );
 const paths = {
 	styles: {
 		src: [ 'assets/styles/*.css', '!assets/styles/variables.css' ],
-		dest: 'assets/styles/build/'
+		dest: 'assets/styles/build/',
+		watch: [ 'assets/styles/**/*.css', '!assets/styles/build/**' ]
 	}
 };
 
@@ -34,7 +35,7 @@ function styles() {
 }
 
 function watch() {
-	gulp.watch( paths.styles.src, styles );
+	gulp.watch( paths.styles.watch, styles );
 }
 
 // Workflows
