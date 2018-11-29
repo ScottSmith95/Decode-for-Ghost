@@ -30,6 +30,26 @@ Copyright (c) 2013-2018 Scott Smith - Released under The MIT License.
 
 5. Profit.
 
+### Compiling CSS (For deployment)
+There is a gulp task to create a zip file that can be uploaded.
+
+1. Change into the root directory of the theme
+
+    `cd /path/to/ghost/content/themes/decode/`
+
+2. Install dependencies for npm
+
+    `npm ci || npm install`
+
+3. Run Gulp
+
+    `gulp build`
+    `gulp bundle`
+
+4. In your Ghost Design admin page, upload the file found in /path/to/ghost/content/themes/decode/distribution
+
+5. Profit.
+
 
 ### Additional Notes
 

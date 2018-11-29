@@ -3,6 +3,7 @@
 const gulp       = require( 'gulp' );
 const postcss    = require( 'gulp-postcss' );
 const sourcemaps = require( 'gulp-sourcemaps' );
+const zip 		 = require( 'gulp-zip' );
 
 const paths = {
 	styles: {
@@ -37,12 +38,27 @@ function watch() {
 	gulp.watch( paths.styles.src, styles );
 }
 
+function bundle() {
+	 return gulp.src([ './*',
+                './assets/**',
+                './locales/**',
+                './partials/**',
+                '!./node_modules',
+                '!./distribution' ],
+            {base: '.'})
+        .pipe(zip('decode.zip'))
+        .pipe(gulp.dest('./distribution'));
+}
+
+
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concencates and minifies JS files; watches for changes. The works.
-const defaultTask = gulp.parallel( styles, watch );
+const defaultTask = gulp.parallel( styles, watch, bundle );
 
 // $ gulp build: Builds, prefixes, and minifies CSS files; concencates and minifies JS files. For deployments.
 const buildTask = gulp.parallel( styles );
+
+const bundleTask = gulp.parallel( bundle );
 
 // Exports
 // Externalise individual tasks.
@@ -52,3 +68,4 @@ exports.watch = watch;
 // Externalise Workflows.
 exports.build = buildTask;
 exports.default = defaultTask;
+exports.bundle = bundleTask;

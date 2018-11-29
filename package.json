@@ -34,17 +34,18 @@
 		"test": "gscan ./"
 	},
 	"devDependencies": {
-		"autoprefixer": "^9.1.2",
+		"autoprefixer": "^9.3.1",
 		"css-mqpacker": "^7.0.0",
-		"cssnano": "^4.0.5",
-		"gscan": "^2.1.1",
-		"gulp": "github:gulpjs/gulp#4.0",
+		"cssnano": "^4.1.7",
+		"gscan": "^2.2.1",
+		"gulp": "^4.0.0",
 		"gulp-postcss": "^8.0.0",
 		"gulp-sourcemaps": "^2.6.4",
-		"postcss-custom-properties": "^7.0.0",
+		"gulp-zip": "^4.2.0",
+		"postcss-custom-properties": "^8.0.9",
 		"postcss-import": "^12.0.0",
-		"postcss-nested": "^3.0.0",
-		"postcss-normalize": "^6.0.0"
+		"postcss-nested": "^4.1.0",
+		"postcss-normalize": "^7.0.1"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -53,5 +54,8 @@
 	],
 	"config": {
 		"posts_per_page": 10
+	},
+	"dependencies": {
+		"gulp-cli": "^2.0.1"
 	}
 }
