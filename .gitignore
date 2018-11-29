@@ -4,3 +4,5 @@ config.codekit
 node_modules/
 bower_components/
 assets/**/build/
+distribution/
+.python-version
