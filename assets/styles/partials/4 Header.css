@@ -1,9 +1,7 @@
 /* ==========================================================================
    4. Header - The top of every page
    ========================================================================== */
-.blog-logo,
-.header-logo {
-	transition: opacity 0.3s ease;
+.blog-logo {
 	opacity: 1;
 	position: relative;
 	z-index: 3;
@@ -15,51 +13,30 @@
 	user-drag: none;
 }
 
-	.blog-logo a img:hover {
-		opacity: 0.75;
-	}
-	
-	.blog-logo a img:active {
-		opacity: 0.85;
-	}
-
-
 /*************************
 	Fancy page headers
 *************************/
 .fancy-header {
 	&.blog-has-cover {
-		.header-logo {
+		.blog-logo {
+			position: absolute;
+			left: 0;
+			right: 0;
 			filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.35));
 			backface-visibility: hidden; /* A little hack that makes the image look crisp on HiDPI Displays: http://creativeandcode.com/fix-css-filters-creating-blurry-images-on-retina/ */
+			margin-top: 0;
 		}
 
 		.site-main {
 			position: relative; /* Create stacking context and set height above cover photo */
 			z-index: 2;
 			transform: translateZ(0); /* Turn on GPU acceleration to get smooth scrolling */
-			margin-top: 15em;
+			padding-top: 1rem;
 			box-shadow: 0 -1em 1em rgba(0, 0, 0, 0.35);
+			margin-top: 60vh;
 		}
 		
 		.site-header {
-			margin-top: 0;
-		}
-	}
-	
-	&.blog-has-logo {
-		.site-header {
-			margin-top: 0;
-		}
-	}
-	
-	&.blog-has-cover.blog-has-logo {
-		.blog-logo,
-		.header-logo {
-			margin-top: 0;
-		}
-		
-		.site-main {
 			margin-top: 0;
 		}
 	}
@@ -76,23 +53,14 @@
 }
 
 .fancy-header.blog-has-cover.blog-has-logo {
-	.blog-logo, .header-logo {
-		top: 3em;
+		.blog-logo {
+			top: -3em;
+		}
+		
+		.site-main {
+			padding-top: 3em;
+		}
 	}
-	
-	.site-main {
-		padding-top: 3em;
-	}
-}
-
-.header-logo.author-image {
-	border-radius: 50%;
-}
-
-.page-scroll {
-	margin-top: 5em;
-	position: relative;
-}
 
 .site-header {
 	width: 100%;
@@ -144,14 +112,9 @@
 }
 
 @media only screen and (min-width: 35em) {
-	.page-scroll {
-		margin-top: 50vh;
-	}
-	
-	.fancy-header.blog-has-cover.blog-has-logo,
-	.fancy-header.blog-has-cover.author-has-image {
-		.blog-logo, .header-logo {
-			top: 4.25em;
+	.fancy-header.blog-has-cover.blog-has-logo {
+		.blog-logo {
+			top: -4.25em;
 		}
 		
 		.site-main {
@@ -167,7 +130,7 @@
 		height: 15em;
 	}
 	
-	.blog-logo, .header-logo {
+	.blog-logo {
 		height: 8.5em;
 	}
 }

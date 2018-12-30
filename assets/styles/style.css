@@ -64,6 +64,8 @@
 }
 
 .site-content {
+	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 	
 	header {
@@ -407,13 +409,14 @@ figure.kg-gallery-card {
 	}
 }
 
-.site-header {
-	.author-card {
+.author-page-card {
+	&.author-card {
 		display: inline-block;
+		align-self: center;
 		min-width: 50%;
 		text-align: center;
 		padding: 2.5% 3.5%;
-		margin: 3.5% auto 1.5%;
+		margin: 0 auto 3rem;
 	}
 	
 	.author-meta {

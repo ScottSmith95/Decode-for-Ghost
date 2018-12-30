@@ -1,21 +1,15 @@
 {{!< default}}
 
-{{#if @blog.blog.cover_image}}
-	<div class="page-scroll">
-{{/if}}
+{{! The main content area }}
+<main class="site-content" role="main">
+	
 	{{#author}}
-	{{#if profile_image}}
-		<a href="{{@blog.url}}">
-			<img class="header-logo author-image" src="{{profile_image}}" alt="{{name}}'s Image">
-		</a>
-	{{/if}}
-	{{/author}}
-
-<div class="site-main">
-
-<header class="site-header">
-	{{#author}}
-		<section class="author-card cf">
+		<section class="author-card author-page-card cf">
+			{{#if profile_image}}
+				<figure class="author-image">
+					<img src="{{profile_image}}" alt="{{name}}'s Image">
+				</figure>
+			{{/if}}
 			<div class="author-meta">
 				 {{#if name}}<a class="author-name" href="{{url}}">{{name}}</a>{{/if}}
 				 {{#if website}}<a href="{{website}}" class="author-website" rel="author">{{t "Website"}}</a>{{/if}}
@@ -24,12 +18,6 @@
 			</div>
 		</section>
 	{{/author}}
-
-	{{navigation}}
-</header>
-
-{{! The main content area }}
-<main class="site-content" role="main">
 
 	{{! Each post will be output using this markup }}
 	{{#foreach posts}}
