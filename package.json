@@ -1,6 +1,6 @@
 {
 	"name": "decode",
-	"version": "0.9.1",
+	"version": "0.9.2",
 	"description": "A minimal, modern Ghost blog theme.",
 	"keywords": [
 		"ghost",
@@ -41,11 +41,13 @@
 		"gulp": "^4.0.0",
 		"gulp-postcss": "^8.0.0",
 		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify": "^3.0.1",
 		"gulp-zip": "^4.2.0",
 		"postcss-custom-properties": "^8.0.9",
 		"postcss-import": "^12.0.1",
 		"postcss-nested": "^4.1.1",
-		"postcss-normalize": "^7.0.1"
+		"postcss-normalize": "^7.0.1",
+		"terser": "~3.13.1"
 	},
 	"browserslist": [
 		"last 2 versions",

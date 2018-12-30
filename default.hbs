@@ -61,6 +61,10 @@
 
 	</div> {{! end .site-main }}
 
+	{{#is "post, page"}}
+		<script async src=="{{asset "scripts/build/main.js"}}"></script>
+	{{/is}}
+
 	{{! Ghost outputs important scripts and data with this tag }}
 	{{ghost_foot}}
 
