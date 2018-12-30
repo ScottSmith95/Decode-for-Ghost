@@ -87,7 +87,7 @@ const defaultTask = gulp.parallel( styles, scripts, watch );
 const buildTask = gulp.parallel( styles, scripts );
 
 // $ gulp bundle: Builds and bundles theme into a ZIP for simple theme install.
-const bundleTask = gulp.parallel( buildTask, bundle );
+const bundleTask = gulp.series( buildTask, bundle );
 
 // Exports
 // Externalise individual tasks.
