@@ -69,6 +69,7 @@ function bundle() {
         './assets/**',
         './locales/**',
         './partials/**',
+        '!./.*',
         '!./node_modules',
         '!./distribution'
       ],
