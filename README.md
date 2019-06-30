@@ -1,5 +1,6 @@
 # Decode for Ghost
-#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.9.2/decode.zip)
+
+#### [Download the latest release for Ghost here.](https://github.com/ScottSmith95/Decode-for-Ghost/releases/download/0.9.3/decode.zip)
 
 #### [Demo](https://decode-ghost-demo.scotthsmith.com)
 
@@ -13,38 +14,38 @@ Copyright (c) 2013-2019 Scott Smith - Released under The MIT License.
 
 1. Change into the root directory of the theme
 
-    `cd /path/to/ghost/content/themes/decode/`
+   `cd /path/to/ghost/content/themes/decode/`
 
 2. Install dependencies for npm
 
-    `npm ci || npm install`
+   `npm ci || npm install`
 
 3. Run Gulp
 
-    `gulp build`
+   `gulp build`
 
 4. Restart Ghost
-    (Only needed if ghost is running in production.)
-    
-    `ghost restart`
+   (Only needed if ghost is running in production.)
+
+   `ghost restart`
 
 ### Compiling Theme (For deployment)
+
 There is a gulp task to create a zip file that can be uploaded to Ghost's admin.
 
 1. Change into the root directory of the theme
 
-    `cd /path/to/ghost/content/themes/decode/`
+   `cd /path/to/ghost/content/themes/decode/`
 
 2. Install dependencies for npm
 
-    `npm ci || npm install`
+   `npm ci || npm install`
 
 3. Run Gulp
 
-    `gulp bundle`
+   `gulp bundle`
 
 4. In your Ghost Design admin page, upload the file found in /path/to/ghost/content/themes/decode/distribution
-
 
 ### Additional Notes
 
