@@ -1,16 +1,16 @@
 {{!< default}}
 
-{{#if @blog.blog.cover_image}}
+{{#if @site.blog.cover_image}}
 	<div class="page-scroll">
 {{/if}}
-	{{#if @blog.logo}}
-		<a href="{{@blog.url}}"><img class="header-logo blog-logo" src="{{@blog.logo}}" alt="Blog Logo"></a>
+	{{#if @site.logo}}
+		<a href="{{@site.url}}"><img class="header-logo blog-logo" src="{{@site.logo}}" alt="Blog Logo"></a>
 	{{/if}}
 <div class="site-main">
 
 <header class="site-header">
-	{{#if @blog.title}}<h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>{{/if}}
-	{{#if @blog.description}}<h2 class="blog-description">{{@blog.description}}</h2>{{/if}}
+	{{#if @site.title}}<h1 class="blog-title"><a href="{{@site.url}}">{{@site.title}}</a></h1>{{/if}}
+	{{#if @site.description}}<h2 class="blog-description">{{@site.description}}</h2>{{/if}}
 	
 	{{navigation}}
 </header>
