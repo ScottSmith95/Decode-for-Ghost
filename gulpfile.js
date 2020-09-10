@@ -3,10 +3,7 @@
 const gulp = require( 'gulp' );
 const postcss = require( 'gulp-postcss' );
 const sourcemaps = require( 'gulp-sourcemaps' );
-// Use terser minifier with gulp-uglify for ES2015 support.
-const composer   = require( 'gulp-uglify/composer' );
-const terser     = require( 'terser' );
-const minify     = composer( terser, console );
+const minify = require( 'gulp-terser' );
 const zip = require( 'gulp-zip' );
 
 const paths = {
