@@ -25,7 +25,7 @@ function styles() {
     require( 'postcss-nested' ),
     require( 'postcss-custom-properties' ),
     require( 'postcss-normalize' )( { forceImport: true } ),
-    require( 'css-mqpacker' )( { sort: true } ),
+    require( 'postcss-sort-media-queries' ),
     require( 'autoprefixer' ),
     require( 'cssnano' )( {
       preset: [
