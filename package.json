@@ -36,19 +36,19 @@
 		"test": "gscan ./"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.2.5",
-		"cssnano": "^5.0.0-rc.2",
-		"gscan": "^4.0.1",
+		"autoprefixer": "^10.4.4",
+		"cssnano": "^5.1.4",
+		"gscan": "^4.22.0",
 		"gulp": "^4.0.2",
-		"gulp-postcss": "^9.0.0",
+		"gulp-postcss": "^9.0.1",
 		"gulp-sourcemaps": "^3.0.0",
-		"gulp-terser": "^2.0.1",
+		"gulp-terser": "^2.1.0",
 		"gulp-zip": "^5.1.0",
-		"postcss-custom-properties": "^11.0.0",
-		"postcss-import": "^14.0.0",
-		"postcss-nested": "^5.0.5",
-		"postcss-normalize": "^9.0.0",
-		"postcss-sort-media-queries": "^3.6.5"
+		"postcss-custom-properties": "^12.1.4",
+		"postcss-import": "^14.0.2",
+		"postcss-nested": "^5.0.6",
+		"postcss-normalize": "^10.0.1",
+		"postcss-sort-media-queries": "^4.2.1"
 	},
 	"browserslist": [
 		"last 2 versions",
