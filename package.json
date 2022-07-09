@@ -1,6 +1,6 @@
 {
 	"name": "decode",
-	"version": "0.9.4",
+	"version": "0.9.6",
 	"description": "A minimal, modern Ghost blog theme.",
 	"keywords": [
 		"ghost",
@@ -14,7 +14,7 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"ghost": ">=4.0.0"
+		"ghost": ">=5.0.0"
 	},
 	"gpm": {
 		"type": "theme",
@@ -59,5 +59,6 @@
 	},
 	"dependencies": {
 		"gulp-cli": "^2.3.0"
-	}
+	},
+	"card_assets": true
 }
