@@ -14,8 +14,7 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"ghost": ">=4.0.0",
-		"ghost-api": "v4"
+		"ghost": ">=4.0.0"
 	},
 	"gpm": {
 		"type": "theme",
