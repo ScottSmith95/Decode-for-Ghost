@@ -8,5 +8,7 @@
 	--highlight-color: RGBA(147, 187, 201, 0.5);
 	
 	/* Fonts */
-	--font-family: "Oxygen", "Helvetica Neue", "Arial", sans-serif;
+	--font-family-theme: "Oxygen", "Helvetica Neue", "Arial", sans-serif;
+	--font-family-heading-custom: var(--gh-font-heading, var(--font-family-theme));
+	--font-family-body-custom: var(--gh-font-body, var(--font-family-theme));
 }

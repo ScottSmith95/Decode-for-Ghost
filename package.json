@@ -1,6 +1,6 @@
 {
 	"name": "decode",
-	"version": "0.9.4",
+	"version": "1.0.0",
 	"description": "A minimal, modern Ghost blog theme.",
 	"keywords": [
 		"ghost",
@@ -13,9 +13,9 @@
 		"url": "https://ScottHSmith.com"
 	},
 	"license": "MIT",
+	"type": "module",
 	"engines": {
-		"ghost": ">=4.0.0",
-		"ghost-api": "v4"
+		"ghost": ">=5.54.1"
 	},
 	"gpm": {
 		"type": "theme",
@@ -36,19 +36,19 @@
 		"test": "gscan ./"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.4.4",
-		"cssnano": "^5.1.4",
-		"gscan": "^4.22.0",
-		"gulp": "^4.0.2",
-		"gulp-postcss": "^9.0.1",
+		"autoprefixer": "^10.4.21",
+		"cssnano": "^7.0.6",
+		"gscan": "^4.47.0",
+		"gulp": "^5.0.0",
+		"gulp-postcss": "^10.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-terser": "^2.1.0",
-		"gulp-zip": "^5.1.0",
-		"postcss-custom-properties": "^12.1.4",
-		"postcss-import": "^14.0.2",
-		"postcss-nested": "^5.0.6",
-		"postcss-normalize": "^10.0.1",
-		"postcss-sort-media-queries": "^4.2.1"
+		"gulp-zip": "^6.1.0",
+		"postcss-custom-properties": "^14.0.4",
+		"postcss-import": "^16.1.0",
+		"postcss-nested": "^7.0.2",
+		"postcss-normalize": "^13.0.1",
+		"postcss-sort-media-queries": "^5.2.0"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -56,9 +56,10 @@
 		"Firefox ESR"
 	],
 	"config": {
-		"posts_per_page": 10
+		"posts_per_page": 10,
+		"card_assets": true
 	},
 	"dependencies": {
-		"gulp-cli": "^2.3.0"
+		"gulp-cli": "^3.0.0"
 	}
 }

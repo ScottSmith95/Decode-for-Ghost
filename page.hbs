@@ -10,8 +10,13 @@
 			{{#contentFor "meta"}}
 				<meta property="og:description" content="{{excerpt characters="220"}}...">
 			{{/contentFor}}
-
-			<h1 class="post-title">{{{title}}}</h1>
+			
+			{{#match @page.show_title_and_feature_image}}
+				<header class="post-header">
+					{{#if post.feature_image}}<img class="post-image" src="{{post.feature_image}}">{{/if}}
+					<h1 class="post-title">{{title}}</h1>
+				</header>
+			{{/match}}
 
 			<section class="post-content">
 				{{content}}

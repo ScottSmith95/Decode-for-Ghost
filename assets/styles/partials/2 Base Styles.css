@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	font: normal 300 100%/1.5 var(--font-family);
+	font: normal 300 100%/1.5 var(--font-family-body-custom);
 	color: var(--text-color);
 	background-color: var(--background-color);
 	background-position: center;
@@ -27,6 +27,7 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
+	font-family: var(--font-family-heading-custom);
 	line-height: 1;
 	text-rendering: optimizeLegibility;
 	margin-bottom: 0.375em;
