@@ -8,7 +8,7 @@ A minimal, modern theme, designed to be mobile first and very responsive, Decode
 
 Please open an issue here on GitHub if you have any suggestions or problems with the theme.
 
-Copyright (c) 2013-2019 Scott Smith - Released under The MIT License.
+Copyright © 2013–2025 Scott Smith - Released under The MIT License.
 
 ### Compiling Theme (For development)
 
