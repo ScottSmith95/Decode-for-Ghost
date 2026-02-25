@@ -4,7 +4,6 @@ import { src, dest, watch, series, parallel } from 'gulp';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import minify from 'gulp-terser';
-import zip from 'gulp-zip';
 
 // PostCSS Plugins
 import postcssImport from 'postcss-import';
@@ -67,23 +66,6 @@ function watchTask() {
   watch( paths.scripts.src, scripts );
 }
 
-function bundle() {
-  return src(
-      [
-        './*',
-        './assets/**',
-        './locales/**',
-        './partials/**',
-        '!./.*',
-        '!./node_modules',
-        '!./distribution'
-      ],
-      { base: '.' }
-    )
-    .pipe( zip( 'decode.zip' ) )
-    .pipe( dest( './distribution' ) );
-}
-
 // Workflows
 // $ gulp: Builds, prefixes, and minifies CSS files; concatenates and minifies JS files; watches for changes. The works.
 const defaultTask = parallel( styles, scripts, watch );
@@ -91,16 +73,12 @@ const defaultTask = parallel( styles, scripts, watch );
 // $ gulp build: Builds, prefixes, and minifies CSS files; concatenates and minifies JS files. For deployments.
 const buildTask = parallel( styles, scripts );
 
-// $ gulp bundle: Builds and bundles theme into a ZIP for simple theme install.
-const bundleTask = series( buildTask, bundle );
-
 // Exports
 export {
   styles,
   scripts,
   watchTask as watch,
-  buildTask as build,
-  bundleTask as bundle
+  buildTask as build
 };
 
 export default defaultTask;

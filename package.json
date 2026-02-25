@@ -32,10 +32,11 @@
 	},
 	"scripts": {
 		"build": "gulp build",
-		"dist": "gulp bundle",
+		"dist": "npm run build && node bundle.mjs",
 		"test": "gscan ./"
 	},
 	"devDependencies": {
+		"adm-zip": "^0.5.16",
 		"autoprefixer": "^10.4.21",
 		"cssnano": "^7.0.6",
 		"gscan": "^4.47.0",
@@ -43,7 +44,6 @@
 		"gulp-postcss": "^10.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-terser": "^2.1.0",
-		"gulp-zip": "^6.1.0",
 		"postcss-custom-properties": "^14.0.4",
 		"postcss-import": "^16.1.0",
 		"postcss-nested": "^7.0.2",

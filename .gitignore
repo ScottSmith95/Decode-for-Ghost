@@ -2,4 +2,4 @@
 .sass-cache/
 node_modules/
 assets/**/build/
-distribution/
+dist/
