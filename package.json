@@ -39,7 +39,7 @@
 		"adm-zip": "^0.5.16",
 		"autoprefixer": "^10.4.21",
 		"cssnano": "^7.0.6",
-		"gscan": "^4.47.0",
+		"gscan": "^4.49.7",
 		"gulp": "^5.0.0",
 		"gulp-postcss": "^10.0.0",
 		"gulp-sourcemaps": "^3.0.0",
