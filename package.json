@@ -37,15 +37,15 @@
 	},
 	"devDependencies": {
 		"adm-zip": "^0.5.16",
-		"autoprefixer": "^10.4.21",
-		"cssnano": "^7.0.6",
-		"gscan": "^4.47.0",
-		"gulp": "^5.0.0",
+		"autoprefixer": "^10.4.27",
+		"cssnano": "^7.1.2",
+		"gscan": "^5.2.5",
+		"gulp": "^5.0.1",
 		"gulp-postcss": "^10.0.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-terser": "^2.1.0",
-		"postcss-custom-properties": "^14.0.4",
-		"postcss-import": "^16.1.0",
+		"postcss-custom-properties": "^15.0.1",
+		"postcss-import": "^16.1.1",
 		"postcss-nested": "^7.0.2",
 		"postcss-normalize": "^13.0.1",
 		"postcss-sort-media-queries": "^5.2.0"
@@ -60,6 +60,6 @@
 		"card_assets": true
 	},
 	"dependencies": {
-		"gulp-cli": "^3.0.0"
+		"gulp-cli": "^3.1.0"
 	}
 }
